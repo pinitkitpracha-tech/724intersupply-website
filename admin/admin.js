@@ -24,7 +24,7 @@
 
   /* ------------------------------ สไตล์ ------------------------------ */
   const css = `
-  .adm-ui, .adm-ui * { box-sizing: border-box; font-family: 'Anuphan','Inter',sans-serif; }
+  .adm-ui, .adm-ui * { box-sizing: border-box; font-family: 'Anuphan','Sukhumvit Set','Leelawadee UI','Noto Sans Thai','Inter',sans-serif; }
   .adm-ui { --g9:#183c2d; --g7:#225a41; --g5:#3b8b64; --g1:#dcefe3; --g0:#f1f8f4; color:#1e293b; }
   .adm-overlay { position:fixed; inset:0; z-index:9998; background:rgba(12,33,25,.55); backdrop-filter:blur(6px); display:flex; align-items:center; justify-content:center; padding:16px; }
   .adm-card { width:100%; max-width:420px; background:#fff; border-radius:24px; padding:28px; box-shadow:0 30px 80px -20px rgba(0,0,0,.4); max-height:92vh; overflow:auto; }
@@ -53,7 +53,7 @@
   .adm-badge { background:#c8a96a; color:#fff; border-radius:999px; padding:1px 7px; font-size:12px; }
 
   .adm-hl { position:fixed; z-index:9980; pointer-events:none; border:2px solid #3b8b64; border-radius:8px; background:rgba(59,139,100,.08); transition:all .08s; display:none; }
-  .adm-hl span { position:absolute; top:-24px; left:-2px; background:#3b8b64; color:#fff; font-size:11px; padding:3px 8px; border-radius:6px; white-space:nowrap; font-family:'Anuphan',sans-serif; }
+  .adm-hl span { position:absolute; top:-24px; left:-2px; background:#3b8b64; color:#fff; font-size:11px; padding:3px 8px; border-radius:6px; white-space:nowrap; font-family:'Anuphan','Sukhumvit Set','Leelawadee UI','Noto Sans Thai',sans-serif; }
   body.adm-on { padding-bottom:80px; }
   body.adm-on a, body.adm-on button:not(.adm-btn):not([data-lang]) { cursor:pointer; }
 

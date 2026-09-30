@@ -13,9 +13,23 @@
   <meta property="og:url" content="https://www.724intersupply.com/articles/ev-cabin-air-filter.html" />
   <meta property="og:image" content="https://www.724intersupply.com/assets/filters-carbon.webp" />
   <meta property="og:locale" content="th_TH" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search).get('lang'), l = q;
+      if (!l) { try { l = localStorage.getItem('lang'); } catch (e) {} }
+      if (['th', 'en', 'zh'].indexOf(l) < 0) l = 'th';
+      if (q) { try { localStorage.setItem('lang', l); } catch (e) {} }
+      document.documentElement.setAttribute('data-l', l);
+      document.documentElement.lang = { th: 'th', en: 'en', zh: 'zh-Hant' }[l];
+    })();
+  </script>
+  <link rel="preload" href="../assets/fonts/anuphan-thai-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../assets/fonts/fonts.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     // ปรับแต่งธีม: โทนเขียว-ขาว แบบ Luxury Minimal
@@ -23,7 +37,7 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'Anuphan', 'Noto Sans TC', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'ui-sans-serif', 'system-ui', 'sans-serif'],
           },
           colors: {
             brand: {
@@ -50,7 +64,15 @@
     };
   </script>
   <style>
-    body { font-family: 'Anuphan', 'Inter', sans-serif; }
+    body { font-family: 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', 'Inter', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif; }
+    html[lang="en"] body { font-family: 'Inter', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', sans-serif; }
+    html[lang="zh-Hant"] body { font-family: 'Inter', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', sans-serif; }
+    /* แสดงเฉพาะภาษาที่เลือก */
+    html:not([data-l]) [data-t]:not([data-t="th"]),
+    html[data-l="th"] [data-t]:not([data-t="th"]),
+    html[data-l="en"] [data-t]:not([data-t="en"]),
+    html[data-l="zh"] [data-t]:not([data-t="zh"]) { display: none !important; }
+    .lang-btn[aria-pressed="true"] { background: #225a41; color: #fff; }
     .article h2 { margin: 2.5rem 0 1rem; font-size: 1.5rem; line-height: 1.4; font-weight: 600; color: #0c2119; }
     .article h3 { margin: 1.75rem 0 .5rem; font-size: 1.2rem; font-weight: 600; color: #183c2d; }
     .article p { margin: 1rem 0; line-height: 1.9; color: #475569; font-size: 1.0625rem; }
@@ -65,35 +87,37 @@
     .article th { background: #f1f8f4; color: #183c2d; font-weight: 600; }
     @media (max-width: 640px) { .article table { display: block; overflow-x: auto; } }
   </style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "กรองแอร์รถยนต์ไฟฟ้า (EV) สำคัญกว่าที่คิด: ทำไมรถ EV ต้องใส่ใจแผ่นกรองแอร์", "description": "รถยนต์ไฟฟ้าไม่มีกรองอากาศเครื่องยนต์ แต่ยังต้องมีกรองแอร์ เรียนรู้ว่าทำไมกรองแอร์รถ EV ส่งผลต่อสุขภาพ ความเงียบในห้องโดยสาร และการใช้พลังงานแบตเตอรี่", "image": "https://www.724intersupply.com/assets/filters-carbon.webp", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "inLanguage": "th", "mainEntityOfPage": "https://www.724intersupply.com/articles/ev-cabin-air-filter.html", "author": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd."}, "publisher": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd.", "logo": {"@type": "ImageObject", "url": "https://www.724intersupply.com/assets/logo-724.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://www.724intersupply.com/"}, {"@type": "ListItem", "position": 2, "name": "บทความ", "item": "https://www.724intersupply.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "กรองแอร์รถยนต์ไฟฟ้า (EV) สำคัญกว่าที่คิด: ทำไมรถ EV ต้องใส่ใจแผ่นกรองแอร์", "item": "https://www.724intersupply.com/articles/ev-cabin-air-filter.html"}]}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "กรองแอร์รถยนต์ไฟฟ้า (EV) สำคัญกว่าที่คิด: ทำไมรถ EV ต้องใส่ใจแผ่นกรองแอร์", "description": "รถยนต์ไฟฟ้าไม่มีกรองอากาศเครื่องยนต์ แต่ยังต้องมีกรองแอร์ เรียนรู้ว่าทำไมกรองแอร์รถ EV ส่งผลต่อสุขภาพ ความเงียบในห้องโดยสาร และการใช้พลังงานแบตเตอรี่", "image": "https://www.724intersupply.com/assets/filters-carbon.webp", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "inLanguage": ["th", "en", "zh-Hant"], "mainEntityOfPage": "https://www.724intersupply.com/articles/ev-cabin-air-filter.html", "alternativeHeadline": ["Cabin air filters for electric vehicles (EVs) matter more than you think", "電動車（EV）冷氣濾網比你想像的更重要"], "author": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd."}, "publisher": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd.", "logo": {"@type": "ImageObject", "url": "https://www.724intersupply.com/assets/logo-724.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://www.724intersupply.com/"}, {"@type": "ListItem", "position": 2, "name": "บทความ", "item": "https://www.724intersupply.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "กรองแอร์รถยนต์ไฟฟ้า (EV) สำคัญกว่าที่คิด: ทำไมรถ EV ต้องใส่ใจแผ่นกรองแอร์", "item": "https://www.724intersupply.com/articles/ev-cabin-air-filter.html"}]}]}</script>
+  <script type="application/json" id="meta-i18n">{"th": ["กรองแอร์รถยนต์ไฟฟ้า (EV) สำคัญกว่าที่คิด: ทำไมรถ EV ต้องใส่ใจแผ่นกรองแอร์ | 724 อินเตอร์ซัพพลาย", "รถยนต์ไฟฟ้าไม่มีกรองอากาศเครื่องยนต์ แต่ยังต้องมีกรองแอร์ เรียนรู้ว่าทำไมกรองแอร์รถ EV ส่งผลต่อสุขภาพ ความเงียบในห้องโดยสาร และการใช้พลังงานแบตเตอรี่"], "en": ["Cabin air filters for electric vehicles (EVs) matter more than you think | 724 Inter Supply", "EVs have no engine air filter but still need a cabin air filter. Learn how an EV’s cabin filter affects health, cabin quietness and battery energy use."], "zh": ["電動車（EV）冷氣濾網比你想像的更重要｜724 Inter Supply", "電動車沒有引擎空氣濾清器，但仍需要冷氣濾網。了解電動車冷氣濾網如何影響健康、車廂靜謐性與電池能耗。"]}</script>
 </head>
 <body class="bg-white text-slate-700 antialiased">
   <header class="sticky top-0 z-50 border-b border-brand-100 bg-white/90 backdrop-blur-md">
-    <nav class="mx-auto flex h-20 max-w-6xl items-center justify-between px-5 sm:px-8">
-      <a href="../" class="flex items-center gap-3" aria-label="724 อินเตอร์ซัพพลาย หน้าแรก">
+    <nav class="mx-auto flex h-20 max-w-6xl items-center justify-between gap-3 px-5 sm:px-8">
+      <a href="../" class="flex shrink-0 items-center gap-3" aria-label="724 Inter Supply">
         <img src="../assets/logo-724.png" alt="724 Inter Supply" class="h-9 w-auto" />
-        <span class="hidden sm:block h-8 w-px bg-brand-100"></span>
-        <span class="hidden sm:block text-sm font-semibold text-brand-900">แผ่นกรองแอร์รถยนต์</span>
+        <span class="hidden md:block h-8 w-px bg-brand-100"></span>
+        <span class="hidden md:block text-sm font-semibold text-brand-900"><span data-t="th">แผ่นกรองแอร์รถยนต์</span><span data-t="en">Car cabin air filters</span><span data-t="zh">汽車冷氣濾網</span></span>
       </a>
-      <div class="flex items-center gap-2 sm:gap-6 text-sm">
-        <a href="../articles/" class="hidden sm:inline text-slate-600 hover:text-brand-700">บทความ</a>
-        <a href="../#contact" class="hidden sm:inline text-slate-600 hover:text-brand-700">ติดต่อเรา</a>
-        <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="rounded-full bg-brand-700 px-5 py-2.5 font-medium text-white shadow-soft transition hover:bg-brand-800">ค้นหาสินค้า</a>
+      <div class="flex items-center gap-2 sm:gap-5 text-sm">
+        <a href="../articles/" class="hidden sm:inline text-slate-600 hover:text-brand-700"><span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></a>
+        <a href="../#contact" class="hidden sm:inline text-slate-600 hover:text-brand-700"><span data-t="th">ติดต่อเรา</span><span data-t="en">Contact Us</span><span data-t="zh">聯絡我們</span></a>
+        <div class="flex items-center rounded-full border border-brand-100 p-0.5 text-xs font-medium text-brand-800" role="group" aria-label="Language"><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="th" aria-pressed="false">TH</button><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="en" aria-pressed="false">EN</button><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="zh" aria-pressed="false">中文</button></div>
+        <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="hidden sm:inline-block rounded-full bg-brand-700 px-5 py-2.5 font-medium text-white shadow-soft transition hover:bg-brand-800"><span data-t="th">ค้นหาสินค้า</span><span data-t="en">Find products</span><span data-t="zh">搜尋產品</span></a>
       </div>
     </nav>
   </header>
   <main>
     <article class="mx-auto max-w-3xl px-5 sm:px-8 pt-10 pb-20">
       <nav class="text-sm text-slate-500" aria-label="breadcrumb">
-        <a href="../" class="hover:text-brand-700">หน้าแรก</a> <span class="mx-1">/</span>
-        <a href="./" class="hover:text-brand-700">บทความ</a>
+        <a href="../" class="hover:text-brand-700"><span data-t="th">หน้าแรก</span><span data-t="en">Home</span><span data-t="zh">首頁</span></a> <span class="mx-1">/</span>
+        <a href="./" class="hover:text-brand-700"><span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></a>
       </nav>
-      <h1 class="mt-5 text-3xl sm:text-4xl font-semibold leading-snug text-brand-950">กรองแอร์รถยนต์ไฟฟ้า (EV) สำคัญกว่าที่คิด: ทำไมรถ EV ต้องใส่ใจแผ่นกรองแอร์</h1>
-      <p class="mt-4 text-sm text-slate-500">โดย 724 อินเตอร์ซัพพลาย · <time datetime="2026-09-30">30 กันยายน 2569</time></p>
+      <h1 class="mt-5 text-3xl sm:text-4xl font-semibold leading-snug text-brand-950"><span data-t="th">กรองแอร์รถยนต์ไฟฟ้า (EV) สำคัญกว่าที่คิด: ทำไมรถ EV ต้องใส่ใจแผ่นกรองแอร์</span><span data-t="en">Cabin air filters for electric vehicles (EVs) matter more than you think</span><span data-t="zh">電動車（EV）冷氣濾網比你想像的更重要</span></h1>
+      <p class="mt-4 text-sm text-slate-500"><span data-t="th">โดย 724 อินเตอร์ซัพพลาย · </span><span data-t="en">By 724 Inter Supply · </span><span data-t="zh">724 Inter Supply · </span><time datetime="2026-09-30"><span data-t="th">30 กันยายน 2569</span><span data-t="en">30 September 2026</span><span data-t="zh">2026 年 9 月 30 日</span></time></p>
       <div class="mt-8 aspect-[16/9] overflow-hidden rounded-3xl bg-brand-50">
-        <img src="../assets/filters-carbon.webp" alt="แผ่นกรองแอร์รถยนต์ไฟฟ้าแบบคาร์บอน" class="h-full w-full object-cover" />
+        <img src="../assets/filters-carbon.webp" alt="แผ่นกรองแอร์รถยนต์ไฟฟ้าแบบคาร์บอน" data-alt-th="แผ่นกรองแอร์รถยนต์ไฟฟ้าแบบคาร์บอน" data-alt-en="Why cabin air filters matter even more in an EV" data-alt-zh="電動車冷氣濾網比你想的更重要" class="h-full w-full object-cover" />
       </div>
-      <div class="article mt-8">
+      <div class="article mt-8" data-t="th" lang="th">
 <p>หลายคนที่เปลี่ยนมาใช้รถยนต์ไฟฟ้าเข้าใจว่าค่าบำรุงรักษาแทบเป็นศูนย์ เพราะไม่ต้องเปลี่ยนน้ำมันเครื่องหรือกรองอากาศเครื่องยนต์อีกต่อไป แต่มีชิ้นส่วนหนึ่งที่รถ EV ยังต้องมีเหมือนรถน้ำมันทุกประการ นั่นคือ <strong>กรองแอร์รถยนต์</strong> และในหลายแง่มุม มันยิ่งสำคัญกว่าเดิม</p>
 
 <h2>รถ EV ไม่มีกรองอากาศเครื่องยนต์ แต่มีกรองแอร์</h2>
@@ -120,26 +144,70 @@
 
 <p>724 อินเตอร์ซัพพลายพัฒนาแผ่นกรองแอร์สำหรับรถยนต์ไฟฟ้ารองรับตลาด EV ที่เติบโตอย่างรวดเร็ว ภายใต้แบรนด์ <strong>Protect filter</strong> และ <strong>Bee filter</strong> ค้นหารุ่นที่ตรงกับรถของคุณได้ที่ <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener">protectcabinfilter.com</a></p>
       </div>
+      <div class="article mt-8" data-t="en" lang="en">
+<p>Many people switching to electric vehicles assume maintenance costs are almost zero because there are no more oil changes or engine air filters. But there is one part an EV still needs just like a petrol car — the <strong>cabin air filter</strong> — and in many ways it matters even more.</p>
+<h2>EVs have no engine air filter, but they do have a cabin filter</h2>
+<p>An electric motor doesn’t draw in air for combustion, so an EV has no engine air filter. But the people inside still need to breathe, and every litre of air entering the cabin must pass through the cabin air filter first. That makes it the main filter an EV owner needs to look after.</p>
+<h2>3 reasons EV cabin filters deserve special attention</h2>
+<h3>1. A quiet cabin means you hear every sound of the air</h3>
+<p>With no engine noise to mask it, air rushing through a filter that is starting to clog or doesn’t fit properly becomes more noticeable. A filter made for the exact model with the right pleat count lets air flow smoothly, keeping the cabin as quiet as an EV should be.</p>
+<h3>2. The climate system runs more often</h3>
+<p>Many EV owners pre-cool the car from an app before getting in, or sit in the car with the A/C on while charging. The climate system therefore runs for many more hours than in a typical car, and the filter collects dust faster.</p>
+<h3>3. The A/C runs directly on battery power</h3>
+<p>An EV’s blower fan and A/C compressor draw power from the same battery that drives the car. When the filter clogs, the fan has to work harder to move the same amount of air. The energy lost may be small, but keeping the filter clean is an easy way to help the system run efficiently.</p>
+<h2>How to choose an EV cabin air filter</h2>
+<ul>
+  <li><strong>Exact fit, no air bypass:</strong> many EV models use a unique filter housing, so choose a filter made specifically for that model</li>
+  <li><strong>Good PM2.5 filtration:</strong> ideal for city driving, the main environment for EVs</li>
+  <li><strong>Consider a carbon filter:</strong> if you often charge or drive near other vehicles’ exhaust, the carbon layer helps reduce odours entering the cabin</li>
+  <li><strong>Good airflow:</strong> a low-resistance filter keeps the A/C from working harder than necessary</li>
+</ul>
+<h2>How often to replace an EV cabin air filter</h2>
+<p>Follow the manufacturer’s interval in the owner’s manual — typically about once a year. If you often sit in the car with the A/C running, drive in dusty areas or notice a musty smell, inspect and replace it sooner. Because EVs visit the service centre less often than petrol cars, it’s worth noting the date you last replaced the filter.</p>
+<p>724 Inter Supply develops cabin air filters for electric vehicles to serve the fast-growing EV market, under the <strong>Protect filter</strong> and <strong>Bee filter</strong> brands. Find the right filter for your car at <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener">protectcabinfilter.com</a></p>
+      </div>
+      <div class="article mt-8" data-t="zh" lang="zh-Hant">
+<p>許多改開電動車的人以為保養費用幾乎為零，因為不用再換機油或引擎空氣濾清器。但有一個零件電動車仍和燃油車一樣需要，那就是<strong>汽車冷氣濾網</strong>，而且在許多方面它更加重要。</p>
+<h2>電動車沒有引擎空氣濾清器，但有冷氣濾網</h2>
+<p>電動馬達不需要吸入空氣來燃燒，因此電動車沒有引擎空氣濾清器。但車內的人仍需要呼吸，每一公升進入車廂的空氣都必須先通過冷氣濾網，因此冷氣濾網是電動車車主最需要照顧的濾網。</p>
+<h2>電動車冷氣濾網需要特別留意的 3 個原因</h2>
+<h3>1. 車廂安靜，任何氣流聲都聽得見</h3>
+<p>沒有引擎聲掩蓋，氣流通過開始堵塞或尺寸不合的濾網時的聲音會更明顯。依車型精準製造、褶數適當的濾網能讓氣流順暢通過，維持電動車應有的安靜車廂。</p>
+<h3>2. 空調系統運作時間更長</h3>
+<p>許多電動車車主會透過 App 在上車前先開冷氣，或在充電時坐在車內開著冷氣等待，因此空調運轉時數遠多於一般車輛，濾網累積粉塵的速度也更快。</p>
+<h3>3. 冷氣直接使用電池電力</h3>
+<p>電動車的鼓風機與冷氣壓縮機使用與驅動車輛相同的電池電力。濾網堵塞時，風扇必須更費力才能送出相同風量。雖然耗損的電量不多，但保持濾網潔淨是讓系統高效運作的簡單方法。</p>
+<h2>如何挑選電動車冷氣濾網</h2>
+<ul>
+  <li><strong>精準貼合、不漏風：</strong>許多電動車使用專屬尺寸的濾網槽，應選擇專為該車型製造的濾網</li>
+  <li><strong>良好的 PM2.5 過濾：</strong>適合電動車最常行駛的市區環境</li>
+  <li><strong>考慮活性碳濾網：</strong>若常在其他車輛廢氣附近充電或行駛，活性碳層可減少進入車廂的異味</li>
+  <li><strong>氣流順暢：</strong>低風阻濾網可避免冷氣系統不必要地加重負荷</li>
+</ul>
+<h2>電動車冷氣濾網多久更換一次</h2>
+<p>請依車主手冊的原廠建議週期，一般約一年一次。若常開著冷氣在車內等待、行經多塵地區或開始聞到霉味，應提早檢查與更換。由於電動車回廠保養的間隔比燃油車長，建議記下最近一次更換濾網的日期。</p>
+<p>724 Inter Supply 以 <strong>Protect filter</strong> 與 <strong>Bee filter</strong> 品牌開發電動車冷氣濾網，因應快速成長的電動車市場。請至 <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener">protectcabinfilter.com</a> 查詢適合您車輛的型號。</p>
+      </div>
       <aside class="mt-14 rounded-3xl bg-brand-900 p-8 sm:p-10 text-white">
         <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand-300 font-sans">Protect filter · Bee filter</p>
-        <h2 class="mt-2 text-2xl font-semibold">หาแผ่นกรองแอร์ที่ตรงกับรถของคุณ</h2>
-        <p class="mt-3 leading-relaxed text-brand-100/90">ผลิตตรงรุ่นสำหรับรถยนต์กว่า 1,400 รุ่น ทั้งรถยนต์นั่ง รถยนต์ไฟฟ้า และเครื่องจักรกลหนัก ร้านค้าและอู่ซ่อมสอบถามราคาส่งได้</p>
+        <h2 class="mt-2 text-2xl font-semibold"><span data-t="th">หาแผ่นกรองแอร์ที่ตรงกับรถของคุณ</span><span data-t="en">Find the right cabin air filter for your car</span><span data-t="zh">找到適合您車輛的冷氣濾網</span></h2>
+        <p class="mt-3 leading-relaxed text-brand-100/90"><span data-t="th">ผลิตตรงรุ่นสำหรับรถยนต์กว่า 1,400 รุ่น ทั้งรถยนต์นั่ง รถยนต์ไฟฟ้า และเครื่องจักรกลหนัก ร้านค้าและอู่ซ่อมสอบถามราคาส่งได้</span><span data-t="en">Made to fit more than 1,400 models — passenger cars, EVs and heavy machinery. Shops and garages can ask for wholesale prices.</span><span data-t="zh">依車型精準製造，適用超過 1,400 款自用車、電動車與重型機械。零件行與修車廠歡迎洽詢批發價。</span></p>
         <div class="mt-6 flex flex-col gap-3 sm:flex-row">
-          <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="inline-flex justify-center rounded-full bg-white px-7 py-3 font-medium text-brand-900 transition hover:bg-brand-100">ค้นหาสินค้า</a>
-          <a href="../#contact" class="inline-flex justify-center rounded-full border border-white/40 px-7 py-3 font-medium text-white transition hover:bg-white/10">ติดต่อขอราคาส่ง</a>
+          <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="inline-flex justify-center rounded-full bg-white px-7 py-3 font-medium text-brand-900 transition hover:bg-brand-100"><span data-t="th">ค้นหาสินค้า</span><span data-t="en">Find products</span><span data-t="zh">搜尋產品</span></a>
+          <a href="../#contact" class="inline-flex justify-center rounded-full border border-white/40 px-7 py-3 font-medium text-white transition hover:bg-white/10"><span data-t="th">ติดต่อขอราคาส่ง</span><span data-t="en">Ask for wholesale prices</span><span data-t="zh">洽詢批發價</span></a>
         </div>
       </aside>
       <section class="mt-14">
-        <h2 class="text-xl font-semibold text-brand-950">บทความที่เกี่ยวข้อง</h2>
+        <h2 class="text-xl font-semibold text-brand-950"><span data-t="th">บทความที่เกี่ยวข้อง</span><span data-t="en">Related articles</span><span data-t="zh">相關文章</span></h2>
         <div class="mt-5 grid gap-4 sm:grid-cols-3">
           <a href="when-to-replace-cabin-air-filter.html" class="group rounded-2xl border border-brand-100 p-5 transition hover:border-brand-300 hover:shadow-soft">
-            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700">กรองแอร์รถยนต์ควรเปลี่ยนเมื่อไหร่? 6 อาการกรองแอร์ตัน</p>
+            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">กรองแอร์รถยนต์ควรเปลี่ยนเมื่อไหร่? 6 อาการกรองแอร์ตัน</span><span data-t="en">When should you replace your cabin air filter? 6 signs it’s clogged</span><span data-t="zh">汽車冷氣濾網何時該更換？濾網堵塞的 6 個徵兆</span></p>
           </a>
           <a href="how-to-replace-cabin-air-filter.html" class="group rounded-2xl border border-brand-100 p-5 transition hover:border-brand-300 hover:shadow-soft">
-            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700">วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ใน 10 นาที</p>
+            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ใน 10 นาที</span><span data-t="en">How to replace your cabin air filter yourself in 10 minutes</span><span data-t="zh">10 分鐘自己動手更換汽車冷氣濾網</span></p>
           </a>
           <a href="cabin-air-filter-vs-engine-air-filter.html" class="group rounded-2xl border border-brand-100 p-5 transition hover:border-brand-300 hover:shadow-soft">
-            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700">กรองแอร์รถยนต์ กับ กรองอากาศรถยนต์ ต่างกันอย่างไร?</p>
+            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">กรองแอร์รถยนต์ กับ กรองอากาศรถยนต์ ต่างกันอย่างไร?</span><span data-t="en">Cabin air filter vs engine air filter: what’s the difference?</span><span data-t="zh">汽車冷氣濾網與空氣濾清器有何不同？</span></p>
           </a>
         </div>
       </section>
@@ -147,13 +215,30 @@
   </main>
   <footer class="bg-brand-950 text-brand-300">
     <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-10 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8">
-      <p>© 2026 บริษัท 724 อินเตอร์ซัพพลาย จำกัด สงวนลิขสิทธิ์</p>
+      <p><span data-t="th">© 2026 บริษัท 724 อินเตอร์ซัพพลาย จำกัด สงวนลิขสิทธิ์</span><span data-t="en">© 2026 724 Inter Supply Co., Ltd. All rights reserved.</span><span data-t="zh">© 2026 724 Inter Supply Co., Ltd. 版權所有</span></p>
       <div class="flex flex-wrap gap-x-6 gap-y-2">
-        <a href="../" class="hover:text-white">หน้าแรก</a>
-        <a href="../articles/" class="hover:text-white">บทความ</a>
-        <a href="../#contact" class="hover:text-white">ติดต่อเรา</a>
+        <a href="../" class="hover:text-white"><span data-t="th">หน้าแรก</span><span data-t="en">Home</span><span data-t="zh">首頁</span></a>
+        <a href="../articles/" class="hover:text-white"><span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></a>
+        <a href="../#contact" class="hover:text-white"><span data-t="th">ติดต่อเรา</span><span data-t="en">Contact Us</span><span data-t="zh">聯絡我們</span></a>
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var META = JSON.parse(document.getElementById('meta-i18n').textContent);
+      var desc = document.querySelector('meta[name=description]');
+      function setLang(l) {
+        document.documentElement.setAttribute('data-l', l);
+        document.documentElement.lang = { th: 'th', en: 'en', zh: 'zh-Hant' }[l];
+        document.title = META[l][0];
+        desc.setAttribute('content', META[l][1]);
+        document.querySelectorAll('img[data-alt-' + l + ']').forEach(function (i) { i.alt = i.getAttribute('data-alt-' + l); });
+        document.querySelectorAll('.lang-btn').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.setLang === l ? 'true' : 'false'); });
+        try { localStorage.setItem('lang', l); } catch (e) {}
+      }
+      document.querySelectorAll('.lang-btn').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.setLang); }); });
+      setLang(document.documentElement.getAttribute('data-l') || 'th');
+    })();
+  </script>
 </body>
 </html>

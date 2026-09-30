@@ -13,9 +13,23 @@
   <meta property="og:url" content="https://www.724intersupply.com/articles/" />
   <meta property="og:image" content="https://www.724intersupply.com/assets/hero-filters.webp" />
   <meta property="og:locale" content="th_TH" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search).get('lang'), l = q;
+      if (!l) { try { l = localStorage.getItem('lang'); } catch (e) {} }
+      if (['th', 'en', 'zh'].indexOf(l) < 0) l = 'th';
+      if (q) { try { localStorage.setItem('lang', l); } catch (e) {} }
+      document.documentElement.setAttribute('data-l', l);
+      document.documentElement.lang = { th: 'th', en: 'en', zh: 'zh-Hant' }[l];
+    })();
+  </script>
+  <link rel="preload" href="../assets/fonts/anuphan-thai-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../assets/fonts/fonts.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     // ปรับแต่งธีม: โทนเขียว-ขาว แบบ Luxury Minimal
@@ -23,7 +37,7 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'Anuphan', 'Noto Sans TC', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'ui-sans-serif', 'system-ui', 'sans-serif'],
           },
           colors: {
             brand: {
@@ -50,7 +64,15 @@
     };
   </script>
   <style>
-    body { font-family: 'Anuphan', 'Inter', sans-serif; }
+    body { font-family: 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', 'Inter', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif; }
+    html[lang="en"] body { font-family: 'Inter', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', sans-serif; }
+    html[lang="zh-Hant"] body { font-family: 'Inter', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', sans-serif; }
+    /* แสดงเฉพาะภาษาที่เลือก */
+    html:not([data-l]) [data-t]:not([data-t="th"]),
+    html[data-l="th"] [data-t]:not([data-t="th"]),
+    html[data-l="en"] [data-t]:not([data-t="en"]),
+    html[data-l="zh"] [data-t]:not([data-t="zh"]) { display: none !important; }
+    .lang-btn[aria-pressed="true"] { background: #225a41; color: #fff; }
     .article h2 { margin: 2.5rem 0 1rem; font-size: 1.5rem; line-height: 1.4; font-weight: 600; color: #0c2119; }
     .article h3 { margin: 1.75rem 0 .5rem; font-size: 1.2rem; font-weight: 600; color: #183c2d; }
     .article p { margin: 1rem 0; line-height: 1.9; color: #475569; font-size: 1.0625rem; }
@@ -65,99 +87,118 @@
     .article th { background: #f1f8f4; color: #183c2d; font-weight: 600; }
     @media (max-width: 640px) { .article table { display: block; overflow-x: auto; } }
   </style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "บทความน่ารู้เรื่องกรองแอร์รถยนต์", "url": "https://www.724intersupply.com/articles/", "inLanguage": "th"}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "CollectionPage", "name": "บทความน่ารู้เรื่องกรองแอร์รถยนต์", "url": "https://www.724intersupply.com/articles/", "inLanguage": ["th", "en", "zh-Hant"]}</script>
+  <script type="application/json" id="meta-i18n">{"th": ["บทความน่ารู้เรื่องกรองแอร์รถยนต์ | 724 อินเตอร์ซัพพลาย", "รวมบทความความรู้เรื่องแผ่นกรองแอร์รถยนต์ ระยะเปลี่ยน วิธีเปลี่ยนกรองแอร์ด้วยตัวเอง และวิธีเลือกกรองแอร์ PM2.5 กับกรองแอร์คาร์บอน"], "en": ["Cabin air filter guides | 724 Inter Supply", "Everything about cabin air filters — replacement intervals, DIY replacement, and choosing the right PM2.5 or carbon filter for your car."], "zh": ["汽車冷氣濾網知識文章｜724 Inter Supply", "汽車冷氣濾網知識大全：從更換週期、自行更換方法，到挑選適合您車輛的 PM2.5 與活性碳濾網。"]}</script>
 </head>
 <body class="bg-white text-slate-700 antialiased">
   <header class="sticky top-0 z-50 border-b border-brand-100 bg-white/90 backdrop-blur-md">
-    <nav class="mx-auto flex h-20 max-w-6xl items-center justify-between px-5 sm:px-8">
-      <a href="../" class="flex items-center gap-3" aria-label="724 อินเตอร์ซัพพลาย หน้าแรก">
+    <nav class="mx-auto flex h-20 max-w-6xl items-center justify-between gap-3 px-5 sm:px-8">
+      <a href="../" class="flex shrink-0 items-center gap-3" aria-label="724 Inter Supply">
         <img src="../assets/logo-724.png" alt="724 Inter Supply" class="h-9 w-auto" />
-        <span class="hidden sm:block h-8 w-px bg-brand-100"></span>
-        <span class="hidden sm:block text-sm font-semibold text-brand-900">แผ่นกรองแอร์รถยนต์</span>
+        <span class="hidden md:block h-8 w-px bg-brand-100"></span>
+        <span class="hidden md:block text-sm font-semibold text-brand-900"><span data-t="th">แผ่นกรองแอร์รถยนต์</span><span data-t="en">Car cabin air filters</span><span data-t="zh">汽車冷氣濾網</span></span>
       </a>
-      <div class="flex items-center gap-2 sm:gap-6 text-sm">
-        <a href="../articles/" class="hidden sm:inline text-slate-600 hover:text-brand-700">บทความ</a>
-        <a href="../#contact" class="hidden sm:inline text-slate-600 hover:text-brand-700">ติดต่อเรา</a>
-        <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="rounded-full bg-brand-700 px-5 py-2.5 font-medium text-white shadow-soft transition hover:bg-brand-800">ค้นหาสินค้า</a>
+      <div class="flex items-center gap-2 sm:gap-5 text-sm">
+        <a href="../articles/" class="hidden sm:inline text-slate-600 hover:text-brand-700"><span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></a>
+        <a href="../#contact" class="hidden sm:inline text-slate-600 hover:text-brand-700"><span data-t="th">ติดต่อเรา</span><span data-t="en">Contact Us</span><span data-t="zh">聯絡我們</span></a>
+        <div class="flex items-center rounded-full border border-brand-100 p-0.5 text-xs font-medium text-brand-800" role="group" aria-label="Language"><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="th" aria-pressed="false">TH</button><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="en" aria-pressed="false">EN</button><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="zh" aria-pressed="false">中文</button></div>
+        <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="hidden sm:inline-block rounded-full bg-brand-700 px-5 py-2.5 font-medium text-white shadow-soft transition hover:bg-brand-800"><span data-t="th">ค้นหาสินค้า</span><span data-t="en">Find products</span><span data-t="zh">搜尋產品</span></a>
       </div>
     </nav>
   </header>
   <main class="mx-auto max-w-5xl px-5 sm:px-8 pt-10 pb-20">
-    <nav class="text-sm text-slate-500" aria-label="breadcrumb"><a href="../" class="hover:text-brand-700">หน้าแรก</a> <span class="mx-1">/</span> บทความ</nav>
-    <h1 class="mt-5 text-3xl sm:text-4xl font-semibold text-brand-950">บทความน่ารู้เรื่องกรองแอร์รถยนต์</h1>
-    <p class="mt-4 max-w-2xl text-lg leading-relaxed text-slate-600">รวมความรู้เรื่องแผ่นกรองแอร์รถยนต์ ตั้งแต่ระยะเปลี่ยน วิธีเปลี่ยนด้วยตัวเอง ไปจนถึงการเลือกกรองแอร์ PM2.5 และกรองแอร์คาร์บอนให้เหมาะกับรถของคุณ</p>
+    <nav class="text-sm text-slate-500" aria-label="breadcrumb"><a href="../" class="hover:text-brand-700"><span data-t="th">หน้าแรก</span><span data-t="en">Home</span><span data-t="zh">首頁</span></a> <span class="mx-1">/</span> <span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></nav>
+    <h1 class="mt-5 text-3xl sm:text-4xl font-semibold text-brand-950"><span data-t="th">บทความน่ารู้เรื่องกรองแอร์รถยนต์</span><span data-t="en">Cabin air filter guides</span><span data-t="zh">汽車冷氣濾網知識文章</span></h1>
+    <p class="mt-4 max-w-2xl text-lg leading-relaxed text-slate-600"><span data-t="th">รวมความรู้เรื่องแผ่นกรองแอร์รถยนต์ ตั้งแต่ระยะเปลี่ยน วิธีเปลี่ยนด้วยตัวเอง ไปจนถึงการเลือกกรองแอร์ PM2.5 และกรองแอร์คาร์บอนให้เหมาะกับรถของคุณ</span><span data-t="en">Everything about cabin air filters — replacement intervals, DIY replacement, and choosing the right PM2.5 or carbon filter for your car.</span><span data-t="zh">汽車冷氣濾網知識大全：從更換週期、自行更換方法，到挑選適合您車輛的 PM2.5 與活性碳濾網。</span></p>
     <div class="mt-12 space-y-6">
         <a href="when-to-replace-cabin-air-filter.html" class="group flex flex-col overflow-hidden rounded-3xl border border-brand-100 bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-lift sm:flex-row">
           <div class="aspect-[16/10] sm:aspect-auto sm:w-64 shrink-0 overflow-hidden bg-brand-50">
-            <img src="../assets/test-pm25.webp" alt="เครื่องวัดค่าฝุ่น PM2.5 ในห้องโดยสารรถยนต์" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <img src="../assets/test-pm25.webp" alt="เครื่องวัดค่าฝุ่น PM2.5 ในห้องโดยสารรถยนต์" data-alt-th="เครื่องวัดค่าฝุ่น PM2.5 ในห้องโดยสารรถยนต์" data-alt-en="When should you replace your cabin air filter? 6 signs it’s clogged" data-alt-zh="汽車冷氣濾網何時該更換？濾網堵塞的 6 個徵兆" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
           </div>
           <div class="p-6 sm:p-8">
-            <h2 class="text-xl font-semibold leading-snug text-brand-950 group-hover:text-brand-700">กรองแอร์รถยนต์ควรเปลี่ยนเมื่อไหร่? สังเกต 6 อาการกรองแอร์ตันก่อนสายเกินไป</h2>
-            <p class="mt-3 leading-relaxed text-slate-600">รู้ระยะเปลี่ยนกรองแอร์รถยนต์ที่เหมาะสม พร้อม 6 อาการที่บอกว่ากรองแอร์ตัน และผลเสียเมื่อกรองแอร์สกปรกต่อสุขภาพและระบบแอร์</p>
-            <span class="mt-4 inline-block text-sm font-medium text-brand-600">อ่านบทความ →</span>
+            <h2 class="text-xl font-semibold leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">กรองแอร์รถยนต์ควรเปลี่ยนเมื่อไหร่? สังเกต 6 อาการกรองแอร์ตันก่อนสายเกินไป</span><span data-t="en">When should you replace your car’s cabin air filter? 6 signs it’s clogged before it’s too late</span><span data-t="zh">汽車冷氣濾網多久該換？趁早察覺濾網堵塞的 6 個徵兆</span></h2>
+            <p class="mt-3 leading-relaxed text-slate-600"><span data-t="th">รู้ระยะเปลี่ยนกรองแอร์รถยนต์ที่เหมาะสม พร้อม 6 อาการที่บอกว่ากรองแอร์ตัน และผลเสียเมื่อกรองแอร์สกปรกต่อสุขภาพและระบบแอร์</span><span data-t="en">The right interval for replacing a cabin air filter, 6 signs that it is clogged, and how a dirty filter affects your health and your A/C system.</span><span data-t="zh">了解汽車冷氣濾網的建議更換週期、濾網堵塞的 6 個徵兆，以及髒污濾網對健康與冷氣系統的影響。</span></p>
+            <span class="mt-4 inline-block text-sm font-medium text-brand-600"><span data-t="th">อ่านบทความ →</span><span data-t="en">Read article →</span><span data-t="zh">閱讀文章 →</span></span>
           </div>
         </a>
         <a href="how-to-replace-cabin-air-filter.html" class="group flex flex-col overflow-hidden rounded-3xl border border-brand-100 bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-lift sm:flex-row">
           <div class="aspect-[16/10] sm:aspect-auto sm:w-64 shrink-0 overflow-hidden bg-brand-50">
-            <img src="../assets/filter-hand.webp" alt="มือถือแผ่นกรองแอร์รถยนต์ใหม่" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <img src="../assets/filter-hand.webp" alt="มือถือแผ่นกรองแอร์รถยนต์ใหม่" data-alt-th="มือถือแผ่นกรองแอร์รถยนต์ใหม่" data-alt-en="How to replace your cabin air filter yourself in 10 minutes" data-alt-zh="10 分鐘自己動手更換汽車冷氣濾網" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
           </div>
           <div class="p-6 sm:p-8">
-            <h2 class="text-xl font-semibold leading-snug text-brand-950 group-hover:text-brand-700">วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ทำได้ใน 10 นาที ไม่ต้องใช้เครื่องมือพิเศษ</h2>
-            <p class="mt-3 leading-relaxed text-slate-600">ขั้นตอนเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเองแบบเข้าใจง่าย ตั้งแต่หาตำแหน่งกรองแอร์ ถอดแผ่นเก่า ใส่แผ่นใหม่ให้ถูกทิศทางลม และข้อควรระวัง</p>
-            <span class="mt-4 inline-block text-sm font-medium text-brand-600">อ่านบทความ →</span>
+            <h2 class="text-xl font-semibold leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ทำได้ใน 10 นาที ไม่ต้องใช้เครื่องมือพิเศษ</span><span data-t="en">How to replace your cabin air filter yourself — done in 10 minutes, no special tools</span><span data-t="zh">自己動手更換汽車冷氣濾網：10 分鐘完成，不需特殊工具</span></h2>
+            <p class="mt-3 leading-relaxed text-slate-600"><span data-t="th">ขั้นตอนเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเองแบบเข้าใจง่าย ตั้งแต่หาตำแหน่งกรองแอร์ ถอดแผ่นเก่า ใส่แผ่นใหม่ให้ถูกทิศทางลม และข้อควรระวัง</span><span data-t="en">Easy step-by-step instructions for replacing a cabin air filter: finding it, removing the old one, fitting the new one with the airflow arrow the right way, and what to watch out for.</span><span data-t="zh">簡單易懂的汽車冷氣濾網更換步驟：找到濾網位置、取出舊濾網、依氣流方向裝上新濾網，以及注意事項。</span></p>
+            <span class="mt-4 inline-block text-sm font-medium text-brand-600"><span data-t="th">อ่านบทความ →</span><span data-t="en">Read article →</span><span data-t="zh">閱讀文章 →</span></span>
           </div>
         </a>
         <a href="cabin-air-filter-vs-engine-air-filter.html" class="group flex flex-col overflow-hidden rounded-3xl border border-brand-100 bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-lift sm:flex-row">
           <div class="aspect-[16/10] sm:aspect-auto sm:w-64 shrink-0 overflow-hidden bg-brand-50">
-            <img src="../assets/filters-range.webp" alt="แผ่นกรองแอร์รถยนต์หลากหลายรูปแบบ" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <img src="../assets/filters-range.webp" alt="แผ่นกรองแอร์รถยนต์หลากหลายรูปแบบ" data-alt-th="แผ่นกรองแอร์รถยนต์หลากหลายรูปแบบ" data-alt-en="Cabin air filter vs engine air filter: what’s the difference?" data-alt-zh="汽車冷氣濾網與空氣濾清器有何不同？" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
           </div>
           <div class="p-6 sm:p-8">
-            <h2 class="text-xl font-semibold leading-snug text-brand-950 group-hover:text-brand-700">กรองแอร์รถยนต์ กับ กรองอากาศรถยนต์ ต่างกันอย่างไร? เข้าใจให้ถูกก่อนซื้อ</h2>
-            <p class="mt-3 leading-relaxed text-slate-600">ไขข้อสงสัยกรองแอร์รถยนต์กับกรองอากาศรถยนต์ต่างกันอย่างไร ทั้งหน้าที่ ตำแหน่งติดตั้ง รอบการเปลี่ยน และเหตุผลที่ใช้แทนกันไม่ได้</p>
-            <span class="mt-4 inline-block text-sm font-medium text-brand-600">อ่านบทความ →</span>
+            <h2 class="text-xl font-semibold leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">กรองแอร์รถยนต์ กับ กรองอากาศรถยนต์ ต่างกันอย่างไร? เข้าใจให้ถูกก่อนซื้อ</span><span data-t="en">Cabin air filter vs engine air filter: what’s the difference? Know before you buy</span><span data-t="zh">汽車冷氣濾網與空氣濾清器有何不同？購買前先搞懂</span></h2>
+            <p class="mt-3 leading-relaxed text-slate-600"><span data-t="th">ไขข้อสงสัยกรองแอร์รถยนต์กับกรองอากาศรถยนต์ต่างกันอย่างไร ทั้งหน้าที่ ตำแหน่งติดตั้ง รอบการเปลี่ยน และเหตุผลที่ใช้แทนกันไม่ได้</span><span data-t="en">The difference between a cabin air filter and an engine air filter — what each does, where it sits, how often to replace it, and why they are not interchangeable.</span><span data-t="zh">解答冷氣濾網與引擎空氣濾清器的差異，包括功能、安裝位置、更換週期，以及為何不能互換使用。</span></p>
+            <span class="mt-4 inline-block text-sm font-medium text-brand-600"><span data-t="th">อ่านบทความ →</span><span data-t="en">Read article →</span><span data-t="zh">閱讀文章 →</span></span>
           </div>
         </a>
         <a href="how-to-choose-cabin-air-filter.html" class="group flex flex-col overflow-hidden rounded-3xl border border-brand-100 bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-lift sm:flex-row">
           <div class="aspect-[16/10] sm:aspect-auto sm:w-64 shrink-0 overflow-hidden bg-brand-50">
-            <img src="../assets/hero-filters.webp" alt="แผ่นกรองแอร์รถยนต์สีขาว Protect filter" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <img src="../assets/hero-filters.webp" alt="แผ่นกรองแอร์รถยนต์สีขาว Protect filter" data-alt-th="แผ่นกรองแอร์รถยนต์สีขาว Protect filter" data-alt-en="Which cabin air filter is best? 5 criteria to choose well" data-alt-zh="汽車冷氣濾網哪個牌子好？5 個挑選重點" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
           </div>
           <div class="p-6 sm:p-8">
-            <h2 class="text-xl font-semibold leading-snug text-brand-950 group-hover:text-brand-700">กรองแอร์รถยนต์ยี่ห้อไหนดี? 5 เกณฑ์เลือกกรองแอร์ PM2.5 และแบบคาร์บอนให้คุ้มค่า</h2>
-            <p class="mt-3 leading-relaxed text-slate-600">5 เกณฑ์เลือกกรองแอร์รถยนต์ให้เหมาะกับการใช้งาน เปรียบเทียบกรองแอร์รถยนต์ PM2.5 กับกรองแอร์คาร์บอน และสิ่งที่ควรดูก่อนเลือกซื้อหรือสั่งราคาส่ง</p>
-            <span class="mt-4 inline-block text-sm font-medium text-brand-600">อ่านบทความ →</span>
+            <h2 class="text-xl font-semibold leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">กรองแอร์รถยนต์ยี่ห้อไหนดี? 5 เกณฑ์เลือกกรองแอร์ PM2.5 และแบบคาร์บอนให้คุ้มค่า</span><span data-t="en">Which cabin air filter brand is best? 5 criteria for choosing PM2.5 and carbon filters</span><span data-t="zh">汽車冷氣濾網哪個牌子好？挑選 PM2.5 與活性碳濾網的 5 個重點</span></h2>
+            <p class="mt-3 leading-relaxed text-slate-600"><span data-t="th">5 เกณฑ์เลือกกรองแอร์รถยนต์ให้เหมาะกับการใช้งาน เปรียบเทียบกรองแอร์รถยนต์ PM2.5 กับกรองแอร์คาร์บอน และสิ่งที่ควรดูก่อนเลือกซื้อหรือสั่งราคาส่ง</span><span data-t="en">5 criteria for choosing the right cabin air filter, comparing PM2.5 synthetic filters with carbon filters, and what to check before buying retail or wholesale.</span><span data-t="zh">挑選汽車冷氣濾網的 5 個標準，比較 PM2.5 合成纖維濾網與活性碳濾網，以及零售或批發採購前應注意的事項。</span></p>
+            <span class="mt-4 inline-block text-sm font-medium text-brand-600"><span data-t="th">อ่านบทความ →</span><span data-t="en">Read article →</span><span data-t="zh">閱讀文章 →</span></span>
           </div>
         </a>
         <a href="ev-cabin-air-filter.html" class="group flex flex-col overflow-hidden rounded-3xl border border-brand-100 bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-lift sm:flex-row">
           <div class="aspect-[16/10] sm:aspect-auto sm:w-64 shrink-0 overflow-hidden bg-brand-50">
-            <img src="../assets/filters-carbon.webp" alt="แผ่นกรองแอร์รถยนต์ไฟฟ้าแบบคาร์บอน" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <img src="../assets/filters-carbon.webp" alt="แผ่นกรองแอร์รถยนต์ไฟฟ้าแบบคาร์บอน" data-alt-th="แผ่นกรองแอร์รถยนต์ไฟฟ้าแบบคาร์บอน" data-alt-en="Why cabin air filters matter even more in an EV" data-alt-zh="電動車冷氣濾網比你想的更重要" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
           </div>
           <div class="p-6 sm:p-8">
-            <h2 class="text-xl font-semibold leading-snug text-brand-950 group-hover:text-brand-700">กรองแอร์รถยนต์ไฟฟ้า (EV) สำคัญกว่าที่คิด: ทำไมรถ EV ต้องใส่ใจแผ่นกรองแอร์</h2>
-            <p class="mt-3 leading-relaxed text-slate-600">รถยนต์ไฟฟ้าไม่มีกรองอากาศเครื่องยนต์ แต่ยังต้องมีกรองแอร์ เรียนรู้ว่าทำไมกรองแอร์รถ EV ส่งผลต่อสุขภาพ ความเงียบในห้องโดยสาร และการใช้พลังงานแบตเตอรี่</p>
-            <span class="mt-4 inline-block text-sm font-medium text-brand-600">อ่านบทความ →</span>
+            <h2 class="text-xl font-semibold leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">กรองแอร์รถยนต์ไฟฟ้า (EV) สำคัญกว่าที่คิด: ทำไมรถ EV ต้องใส่ใจแผ่นกรองแอร์</span><span data-t="en">Cabin air filters for electric vehicles (EVs) matter more than you think</span><span data-t="zh">電動車（EV）冷氣濾網比你想像的更重要</span></h2>
+            <p class="mt-3 leading-relaxed text-slate-600"><span data-t="th">รถยนต์ไฟฟ้าไม่มีกรองอากาศเครื่องยนต์ แต่ยังต้องมีกรองแอร์ เรียนรู้ว่าทำไมกรองแอร์รถ EV ส่งผลต่อสุขภาพ ความเงียบในห้องโดยสาร และการใช้พลังงานแบตเตอรี่</span><span data-t="en">EVs have no engine air filter but still need a cabin air filter. Learn how an EV’s cabin filter affects health, cabin quietness and battery energy use.</span><span data-t="zh">電動車沒有引擎空氣濾清器，但仍需要冷氣濾網。了解電動車冷氣濾網如何影響健康、車廂靜謐性與電池能耗。</span></p>
+            <span class="mt-4 inline-block text-sm font-medium text-brand-600"><span data-t="th">อ่านบทความ →</span><span data-t="en">Read article →</span><span data-t="zh">閱讀文章 →</span></span>
           </div>
         </a>
         <a href="excavator-cabin-air-filter.html" class="group flex flex-col overflow-hidden rounded-3xl border border-brand-100 bg-white transition-all duration-500 hover:-translate-y-1 hover:shadow-lift sm:flex-row">
           <div class="aspect-[16/10] sm:aspect-auto sm:w-64 shrink-0 overflow-hidden bg-brand-50">
-            <img src="../assets/construction-machine.webp" alt="รถขุดทำงานในไซต์งานก่อสร้าง" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            <img src="../assets/construction-machine.webp" alt="รถขุดทำงานในไซต์งานก่อสร้าง" data-alt-th="รถขุดทำงานในไซต์งานก่อสร้าง" data-alt-en="Excavator cabin air filters: protecting operators on dusty sites" data-alt-zh="挖土機駕駛艙空氣濾網：在高粉塵工地守護駕駛" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
           </div>
           <div class="p-6 sm:p-8">
-            <h2 class="text-xl font-semibold leading-snug text-brand-950 group-hover:text-brand-700">กรองแอร์รถขุดและเครื่องจักรกลหนัก: ปกป้องคนขับในพื้นที่ฝุ่นจัด</h2>
-            <p class="mt-3 leading-relaxed text-slate-600">ทำไมกรองแอร์รถขุด รถตัก และเครื่องจักรกลหนักจึงสำคัญต่อสุขภาพผู้ปฏิบัติงาน วิธีสังเกตเมื่อต้องเปลี่ยน ข้อควรระวังในการทำความสะอาด และการเลือกแผ่นกรองที่เหมาะกับงานหนัก</p>
-            <span class="mt-4 inline-block text-sm font-medium text-brand-600">อ่านบทความ →</span>
+            <h2 class="text-xl font-semibold leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">กรองแอร์รถขุดและเครื่องจักรกลหนัก: ปกป้องคนขับในพื้นที่ฝุ่นจัด</span><span data-t="en">Cabin air filters for excavators and heavy machinery: protecting operators on dusty sites</span><span data-t="zh">挖土機與重型機械駕駛艙空氣濾網：在高粉塵工地守護駕駛</span></h2>
+            <p class="mt-3 leading-relaxed text-slate-600"><span data-t="th">ทำไมกรองแอร์รถขุด รถตัก และเครื่องจักรกลหนักจึงสำคัญต่อสุขภาพผู้ปฏิบัติงาน วิธีสังเกตเมื่อต้องเปลี่ยน ข้อควรระวังในการทำความสะอาด และการเลือกแผ่นกรองที่เหมาะกับงานหนัก</span><span data-t="en">Why cabin air filters in excavators, loaders and heavy machinery matter for operator health, signs they need replacing, cleaning precautions and choosing heavy-duty filters.</span><span data-t="zh">挖土機、裝載機與重型機械的駕駛艙濾網為何攸關作業人員健康、需要更換的徵兆、清潔注意事項，以及如何挑選重負荷濾網。</span></p>
+            <span class="mt-4 inline-block text-sm font-medium text-brand-600"><span data-t="th">อ่านบทความ →</span><span data-t="en">Read article →</span><span data-t="zh">閱讀文章 →</span></span>
           </div>
         </a>
     </div>
   </main>
   <footer class="bg-brand-950 text-brand-300">
     <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-10 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8">
-      <p>© 2026 บริษัท 724 อินเตอร์ซัพพลาย จำกัด สงวนลิขสิทธิ์</p>
+      <p><span data-t="th">© 2026 บริษัท 724 อินเตอร์ซัพพลาย จำกัด สงวนลิขสิทธิ์</span><span data-t="en">© 2026 724 Inter Supply Co., Ltd. All rights reserved.</span><span data-t="zh">© 2026 724 Inter Supply Co., Ltd. 版權所有</span></p>
       <div class="flex flex-wrap gap-x-6 gap-y-2">
-        <a href="../" class="hover:text-white">หน้าแรก</a>
-        <a href="../articles/" class="hover:text-white">บทความ</a>
-        <a href="../#contact" class="hover:text-white">ติดต่อเรา</a>
+        <a href="../" class="hover:text-white"><span data-t="th">หน้าแรก</span><span data-t="en">Home</span><span data-t="zh">首頁</span></a>
+        <a href="../articles/" class="hover:text-white"><span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></a>
+        <a href="../#contact" class="hover:text-white"><span data-t="th">ติดต่อเรา</span><span data-t="en">Contact Us</span><span data-t="zh">聯絡我們</span></a>
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var META = JSON.parse(document.getElementById('meta-i18n').textContent);
+      var desc = document.querySelector('meta[name=description]');
+      function setLang(l) {
+        document.documentElement.setAttribute('data-l', l);
+        document.documentElement.lang = { th: 'th', en: 'en', zh: 'zh-Hant' }[l];
+        document.title = META[l][0];
+        desc.setAttribute('content', META[l][1]);
+        document.querySelectorAll('img[data-alt-' + l + ']').forEach(function (i) { i.alt = i.getAttribute('data-alt-' + l); });
+        document.querySelectorAll('.lang-btn').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.setLang === l ? 'true' : 'false'); });
+        try { localStorage.setItem('lang', l); } catch (e) {}
+      }
+      document.querySelectorAll('.lang-btn').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.setLang); }); });
+      setLang(document.documentElement.getAttribute('data-l') || 'th');
+    })();
+  </script>
 </body>
 </html>

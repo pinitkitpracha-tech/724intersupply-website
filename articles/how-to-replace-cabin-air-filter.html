@@ -13,9 +13,23 @@
   <meta property="og:url" content="https://www.724intersupply.com/articles/how-to-replace-cabin-air-filter.html" />
   <meta property="og:image" content="https://www.724intersupply.com/assets/filter-hand.webp" />
   <meta property="og:locale" content="th_TH" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search).get('lang'), l = q;
+      if (!l) { try { l = localStorage.getItem('lang'); } catch (e) {} }
+      if (['th', 'en', 'zh'].indexOf(l) < 0) l = 'th';
+      if (q) { try { localStorage.setItem('lang', l); } catch (e) {} }
+      document.documentElement.setAttribute('data-l', l);
+      document.documentElement.lang = { th: 'th', en: 'en', zh: 'zh-Hant' }[l];
+    })();
+  </script>
+  <link rel="preload" href="../assets/fonts/anuphan-thai-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../assets/fonts/fonts.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     // ปรับแต่งธีม: โทนเขียว-ขาว แบบ Luxury Minimal
@@ -23,7 +37,7 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'Anuphan', 'Noto Sans TC', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'ui-sans-serif', 'system-ui', 'sans-serif'],
           },
           colors: {
             brand: {
@@ -50,7 +64,15 @@
     };
   </script>
   <style>
-    body { font-family: 'Anuphan', 'Inter', sans-serif; }
+    body { font-family: 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', 'Inter', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif; }
+    html[lang="en"] body { font-family: 'Inter', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', sans-serif; }
+    html[lang="zh-Hant"] body { font-family: 'Inter', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', sans-serif; }
+    /* แสดงเฉพาะภาษาที่เลือก */
+    html:not([data-l]) [data-t]:not([data-t="th"]),
+    html[data-l="th"] [data-t]:not([data-t="th"]),
+    html[data-l="en"] [data-t]:not([data-t="en"]),
+    html[data-l="zh"] [data-t]:not([data-t="zh"]) { display: none !important; }
+    .lang-btn[aria-pressed="true"] { background: #225a41; color: #fff; }
     .article h2 { margin: 2.5rem 0 1rem; font-size: 1.5rem; line-height: 1.4; font-weight: 600; color: #0c2119; }
     .article h3 { margin: 1.75rem 0 .5rem; font-size: 1.2rem; font-weight: 600; color: #183c2d; }
     .article p { margin: 1rem 0; line-height: 1.9; color: #475569; font-size: 1.0625rem; }
@@ -65,35 +87,37 @@
     .article th { background: #f1f8f4; color: #183c2d; font-weight: 600; }
     @media (max-width: 640px) { .article table { display: block; overflow-x: auto; } }
   </style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ทำได้ใน 10 นาที ไม่ต้องใช้เครื่องมือพิเศษ", "description": "ขั้นตอนเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเองแบบเข้าใจง่าย ตั้งแต่หาตำแหน่งกรองแอร์ ถอดแผ่นเก่า ใส่แผ่นใหม่ให้ถูกทิศทางลม และข้อควรระวัง", "image": "https://www.724intersupply.com/assets/filter-hand.webp", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "inLanguage": "th", "mainEntityOfPage": "https://www.724intersupply.com/articles/how-to-replace-cabin-air-filter.html", "author": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd."}, "publisher": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd.", "logo": {"@type": "ImageObject", "url": "https://www.724intersupply.com/assets/logo-724.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://www.724intersupply.com/"}, {"@type": "ListItem", "position": 2, "name": "บทความ", "item": "https://www.724intersupply.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ทำได้ใน 10 นาที ไม่ต้องใช้เครื่องมือพิเศษ", "item": "https://www.724intersupply.com/articles/how-to-replace-cabin-air-filter.html"}]}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ทำได้ใน 10 นาที ไม่ต้องใช้เครื่องมือพิเศษ", "description": "ขั้นตอนเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเองแบบเข้าใจง่าย ตั้งแต่หาตำแหน่งกรองแอร์ ถอดแผ่นเก่า ใส่แผ่นใหม่ให้ถูกทิศทางลม และข้อควรระวัง", "image": "https://www.724intersupply.com/assets/filter-hand.webp", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "inLanguage": ["th", "en", "zh-Hant"], "mainEntityOfPage": "https://www.724intersupply.com/articles/how-to-replace-cabin-air-filter.html", "alternativeHeadline": ["How to replace your cabin air filter yourself — done in 10 minutes, no special tools", "自己動手更換汽車冷氣濾網：10 分鐘完成，不需特殊工具"], "author": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd."}, "publisher": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd.", "logo": {"@type": "ImageObject", "url": "https://www.724intersupply.com/assets/logo-724.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://www.724intersupply.com/"}, {"@type": "ListItem", "position": 2, "name": "บทความ", "item": "https://www.724intersupply.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ทำได้ใน 10 นาที ไม่ต้องใช้เครื่องมือพิเศษ", "item": "https://www.724intersupply.com/articles/how-to-replace-cabin-air-filter.html"}]}]}</script>
+  <script type="application/json" id="meta-i18n">{"th": ["วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ทำได้ใน 10 นาที ไม่ต้องใช้เครื่องมือพิเศษ | 724 อินเตอร์ซัพพลาย", "ขั้นตอนเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเองแบบเข้าใจง่าย ตั้งแต่หาตำแหน่งกรองแอร์ ถอดแผ่นเก่า ใส่แผ่นใหม่ให้ถูกทิศทางลม และข้อควรระวัง"], "en": ["How to replace your cabin air filter yourself — done in 10 minutes, no special tools | 724 Inter Supply", "Easy step-by-step instructions for replacing a cabin air filter: finding it, removing the old one, fitting the new one with the airflow arrow the right way, and what to watch out for."], "zh": ["自己動手更換汽車冷氣濾網：10 分鐘完成，不需特殊工具｜724 Inter Supply", "簡單易懂的汽車冷氣濾網更換步驟：找到濾網位置、取出舊濾網、依氣流方向裝上新濾網，以及注意事項。"]}</script>
 </head>
 <body class="bg-white text-slate-700 antialiased">
   <header class="sticky top-0 z-50 border-b border-brand-100 bg-white/90 backdrop-blur-md">
-    <nav class="mx-auto flex h-20 max-w-6xl items-center justify-between px-5 sm:px-8">
-      <a href="../" class="flex items-center gap-3" aria-label="724 อินเตอร์ซัพพลาย หน้าแรก">
+    <nav class="mx-auto flex h-20 max-w-6xl items-center justify-between gap-3 px-5 sm:px-8">
+      <a href="../" class="flex shrink-0 items-center gap-3" aria-label="724 Inter Supply">
         <img src="../assets/logo-724.png" alt="724 Inter Supply" class="h-9 w-auto" />
-        <span class="hidden sm:block h-8 w-px bg-brand-100"></span>
-        <span class="hidden sm:block text-sm font-semibold text-brand-900">แผ่นกรองแอร์รถยนต์</span>
+        <span class="hidden md:block h-8 w-px bg-brand-100"></span>
+        <span class="hidden md:block text-sm font-semibold text-brand-900"><span data-t="th">แผ่นกรองแอร์รถยนต์</span><span data-t="en">Car cabin air filters</span><span data-t="zh">汽車冷氣濾網</span></span>
       </a>
-      <div class="flex items-center gap-2 sm:gap-6 text-sm">
-        <a href="../articles/" class="hidden sm:inline text-slate-600 hover:text-brand-700">บทความ</a>
-        <a href="../#contact" class="hidden sm:inline text-slate-600 hover:text-brand-700">ติดต่อเรา</a>
-        <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="rounded-full bg-brand-700 px-5 py-2.5 font-medium text-white shadow-soft transition hover:bg-brand-800">ค้นหาสินค้า</a>
+      <div class="flex items-center gap-2 sm:gap-5 text-sm">
+        <a href="../articles/" class="hidden sm:inline text-slate-600 hover:text-brand-700"><span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></a>
+        <a href="../#contact" class="hidden sm:inline text-slate-600 hover:text-brand-700"><span data-t="th">ติดต่อเรา</span><span data-t="en">Contact Us</span><span data-t="zh">聯絡我們</span></a>
+        <div class="flex items-center rounded-full border border-brand-100 p-0.5 text-xs font-medium text-brand-800" role="group" aria-label="Language"><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="th" aria-pressed="false">TH</button><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="en" aria-pressed="false">EN</button><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="zh" aria-pressed="false">中文</button></div>
+        <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="hidden sm:inline-block rounded-full bg-brand-700 px-5 py-2.5 font-medium text-white shadow-soft transition hover:bg-brand-800"><span data-t="th">ค้นหาสินค้า</span><span data-t="en">Find products</span><span data-t="zh">搜尋產品</span></a>
       </div>
     </nav>
   </header>
   <main>
     <article class="mx-auto max-w-3xl px-5 sm:px-8 pt-10 pb-20">
       <nav class="text-sm text-slate-500" aria-label="breadcrumb">
-        <a href="../" class="hover:text-brand-700">หน้าแรก</a> <span class="mx-1">/</span>
-        <a href="./" class="hover:text-brand-700">บทความ</a>
+        <a href="../" class="hover:text-brand-700"><span data-t="th">หน้าแรก</span><span data-t="en">Home</span><span data-t="zh">首頁</span></a> <span class="mx-1">/</span>
+        <a href="./" class="hover:text-brand-700"><span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></a>
       </nav>
-      <h1 class="mt-5 text-3xl sm:text-4xl font-semibold leading-snug text-brand-950">วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ทำได้ใน 10 นาที ไม่ต้องใช้เครื่องมือพิเศษ</h1>
-      <p class="mt-4 text-sm text-slate-500">โดย 724 อินเตอร์ซัพพลาย · <time datetime="2026-09-30">30 กันยายน 2569</time></p>
+      <h1 class="mt-5 text-3xl sm:text-4xl font-semibold leading-snug text-brand-950"><span data-t="th">วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ทำได้ใน 10 นาที ไม่ต้องใช้เครื่องมือพิเศษ</span><span data-t="en">How to replace your cabin air filter yourself — done in 10 minutes, no special tools</span><span data-t="zh">自己動手更換汽車冷氣濾網：10 分鐘完成，不需特殊工具</span></h1>
+      <p class="mt-4 text-sm text-slate-500"><span data-t="th">โดย 724 อินเตอร์ซัพพลาย · </span><span data-t="en">By 724 Inter Supply · </span><span data-t="zh">724 Inter Supply · </span><time datetime="2026-09-30"><span data-t="th">30 กันยายน 2569</span><span data-t="en">30 September 2026</span><span data-t="zh">2026 年 9 月 30 日</span></time></p>
       <div class="mt-8 aspect-[16/9] overflow-hidden rounded-3xl bg-brand-50">
-        <img src="../assets/filter-hand.webp" alt="มือถือแผ่นกรองแอร์รถยนต์ใหม่" class="h-full w-full object-cover" />
+        <img src="../assets/filter-hand.webp" alt="มือถือแผ่นกรองแอร์รถยนต์ใหม่" data-alt-th="มือถือแผ่นกรองแอร์รถยนต์ใหม่" data-alt-en="How to replace your cabin air filter yourself in 10 minutes" data-alt-zh="10 分鐘自己動手更換汽車冷氣濾網" class="h-full w-full object-cover" />
       </div>
-      <div class="article mt-8">
+      <div class="article mt-8" data-t="th" lang="th">
 <p>การเปลี่ยน <strong>กรองแอร์รถยนต์</strong> เป็นงานดูแลรถที่ง่ายที่สุดอย่างหนึ่ง รถยนต์นั่งส่วนใหญ่ติดตั้งกรองแอร์ไว้หลังช่องเก็บของหน้าผู้โดยสาร ใช้เวลาไม่ถึง 10 นาทีและแทบไม่ต้องใช้เครื่องมือ</p>
 
 <h2>สิ่งที่ต้องเตรียม</h2>
@@ -123,26 +147,78 @@
 
 <p>แผ่นกรองแอร์รถยนต์ Protect filter ผลิตตรงขนาดตามรุ่นรถ (No common size) โครงแข็งแรงไม่หักงอ ใส่ได้พอดีช่องตั้งแต่ครั้งแรก ค้นหารุ่นที่ตรงกับรถของคุณได้ที่ <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener">protectcabinfilter.com</a></p>
       </div>
+      <div class="article mt-8" data-t="en" lang="en">
+<p>Replacing a <strong>cabin air filter</strong> is one of the easiest car maintenance jobs. In most passenger cars the filter sits behind the glovebox, takes under 10 minutes to change and needs almost no tools.</p>
+<h2>What you’ll need</h2>
+<ul>
+  <li>A new cabin air filter that matches your car’s model and year</li>
+  <li>A torch, plus a cloth or small vacuum cleaner to clean the filter housing</li>
+  <li>A screwdriver (only some models need one)</li>
+</ul>
+<h2>Step by step</h2>
+<ol>
+  <li><strong>Turn off the engine and the A/C</strong> so the fan doesn’t pull debris into the system while you work</li>
+  <li><strong>Open the glovebox</strong>, empty it, then release the side stops or clips so it drops down (some models also have a small damper arm on the right to unhook)</li>
+  <li><strong>Remove the filter housing cover</strong>, usually a rectangular plastic cover with clips on both sides</li>
+  <li><strong>Slide the old filter out slowly</strong> so dust and leaves don’t fall into the housing, and note the airflow arrow on its edge</li>
+  <li><strong>Clean the housing</strong> with a vacuum or cloth to remove any debris</li>
+  <li><strong>Insert the new filter with the AIR FLOW arrow pointing the way the air travels</strong> — usually downwards — and push it fully in without bending it</li>
+  <li><strong>Refit the cover and glovebox</strong>, then start the engine and run the fan at full speed to check the airflow is normal and there’s no unusual noise</li>
+</ol>
+<h2>Things to watch out for</h2>
+<ul>
+  <li><strong>Fitting it upside down</strong> reduces filtration efficiency, so always check the arrow</li>
+  <li><strong>A filter that isn’t made for your model</strong> leaves gaps for dust if it’s too small, or bends and restricts airflow if it’s too large</li>
+  <li>Some models place the filter under the bonnet near the base of the windscreen, or under the console. If you’re unsure, check the owner’s manual or ask a mechanic</li>
+</ul>
+<p><strong>Protect filter</strong> cabin air filters are made to exact size for each model (no common sizes), with a rigid frame that won’t bend, so they fit perfectly first time. Find the right filter for your car at <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener">protectcabinfilter.com</a></p>
+      </div>
+      <div class="article mt-8" data-t="zh" lang="zh-Hant">
+<p>更換<strong>汽車冷氣濾網</strong>是最簡單的保養工作之一。多數自用車的濾網位於副駕駛置物箱後方，不到 10 分鐘即可完成，幾乎不需要工具。</p>
+<h2>需要準備</h2>
+<ul>
+  <li>符合車型與年份的新冷氣濾網</li>
+  <li>手電筒，以及清潔濾網槽用的抹布或小型吸塵器</li>
+  <li>螺絲起子（僅部分車型需要）</li>
+</ul>
+<h2>更換步驟</h2>
+<ol>
+  <li><strong>熄火並關閉冷氣</strong>，避免更換時風扇把雜物吸入系統</li>
+  <li><strong>打開副駕駛置物箱</strong>，取出物品後解開兩側卡榫讓置物箱放下（部分車型需先拆下右側的小阻尼桿）</li>
+  <li><strong>拆下濾網槽蓋</strong>，通常是兩側有卡扣的長方形塑膠蓋</li>
+  <li><strong>緩緩抽出舊濾網</strong>，避免灰塵與落葉掉入槽內，並留意舊濾網邊緣的氣流箭頭方向</li>
+  <li><strong>清潔濾網槽</strong>，用吸塵器或抹布清除殘留雜物</li>
+  <li><strong>裝入新濾網，使 AIR FLOW 箭頭指向氣流方向</strong>（多數為朝下），完整推入且不要讓濾網彎折</li>
+  <li><strong>裝回槽蓋與置物箱</strong>，發動引擎並將風量開到最大，確認出風正常且無異音</li>
+</ol>
+<h2>注意事項</h2>
+<ul>
+  <li><strong>裝反方向</strong>會降低過濾效率，每次都要確認箭頭</li>
+  <li><strong>濾網不符車型</strong>：太小會留下縫隙讓粉塵通過，太大則會彎折、阻礙氣流</li>
+  <li>部分車型的濾網位於引擎蓋下擋風玻璃底部或中控台下方，若不確定請參考車主手冊或交由技師處理</li>
+</ul>
+<p><strong>Protect filter</strong> 汽車冷氣濾網依車型精準尺寸製造（No common size），框架堅固不彎折，第一次就能完美貼合。請至 <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener">protectcabinfilter.com</a> 查詢適合您車輛的型號。</p>
+      </div>
       <aside class="mt-14 rounded-3xl bg-brand-900 p-8 sm:p-10 text-white">
         <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand-300 font-sans">Protect filter · Bee filter</p>
-        <h2 class="mt-2 text-2xl font-semibold">หาแผ่นกรองแอร์ที่ตรงกับรถของคุณ</h2>
-        <p class="mt-3 leading-relaxed text-brand-100/90">ผลิตตรงรุ่นสำหรับรถยนต์กว่า 1,400 รุ่น ทั้งรถยนต์นั่ง รถยนต์ไฟฟ้า และเครื่องจักรกลหนัก ร้านค้าและอู่ซ่อมสอบถามราคาส่งได้</p>
+        <h2 class="mt-2 text-2xl font-semibold"><span data-t="th">หาแผ่นกรองแอร์ที่ตรงกับรถของคุณ</span><span data-t="en">Find the right cabin air filter for your car</span><span data-t="zh">找到適合您車輛的冷氣濾網</span></h2>
+        <p class="mt-3 leading-relaxed text-brand-100/90"><span data-t="th">ผลิตตรงรุ่นสำหรับรถยนต์กว่า 1,400 รุ่น ทั้งรถยนต์นั่ง รถยนต์ไฟฟ้า และเครื่องจักรกลหนัก ร้านค้าและอู่ซ่อมสอบถามราคาส่งได้</span><span data-t="en">Made to fit more than 1,400 models — passenger cars, EVs and heavy machinery. Shops and garages can ask for wholesale prices.</span><span data-t="zh">依車型精準製造，適用超過 1,400 款自用車、電動車與重型機械。零件行與修車廠歡迎洽詢批發價。</span></p>
         <div class="mt-6 flex flex-col gap-3 sm:flex-row">
-          <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="inline-flex justify-center rounded-full bg-white px-7 py-3 font-medium text-brand-900 transition hover:bg-brand-100">ค้นหาสินค้า</a>
-          <a href="../#contact" class="inline-flex justify-center rounded-full border border-white/40 px-7 py-3 font-medium text-white transition hover:bg-white/10">ติดต่อขอราคาส่ง</a>
+          <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="inline-flex justify-center rounded-full bg-white px-7 py-3 font-medium text-brand-900 transition hover:bg-brand-100"><span data-t="th">ค้นหาสินค้า</span><span data-t="en">Find products</span><span data-t="zh">搜尋產品</span></a>
+          <a href="../#contact" class="inline-flex justify-center rounded-full border border-white/40 px-7 py-3 font-medium text-white transition hover:bg-white/10"><span data-t="th">ติดต่อขอราคาส่ง</span><span data-t="en">Ask for wholesale prices</span><span data-t="zh">洽詢批發價</span></a>
         </div>
       </aside>
       <section class="mt-14">
-        <h2 class="text-xl font-semibold text-brand-950">บทความที่เกี่ยวข้อง</h2>
+        <h2 class="text-xl font-semibold text-brand-950"><span data-t="th">บทความที่เกี่ยวข้อง</span><span data-t="en">Related articles</span><span data-t="zh">相關文章</span></h2>
         <div class="mt-5 grid gap-4 sm:grid-cols-3">
           <a href="when-to-replace-cabin-air-filter.html" class="group rounded-2xl border border-brand-100 p-5 transition hover:border-brand-300 hover:shadow-soft">
-            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700">กรองแอร์รถยนต์ควรเปลี่ยนเมื่อไหร่? 6 อาการกรองแอร์ตัน</p>
+            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">กรองแอร์รถยนต์ควรเปลี่ยนเมื่อไหร่? 6 อาการกรองแอร์ตัน</span><span data-t="en">When should you replace your cabin air filter? 6 signs it’s clogged</span><span data-t="zh">汽車冷氣濾網何時該更換？濾網堵塞的 6 個徵兆</span></p>
           </a>
           <a href="cabin-air-filter-vs-engine-air-filter.html" class="group rounded-2xl border border-brand-100 p-5 transition hover:border-brand-300 hover:shadow-soft">
-            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700">กรองแอร์รถยนต์ กับ กรองอากาศรถยนต์ ต่างกันอย่างไร?</p>
+            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">กรองแอร์รถยนต์ กับ กรองอากาศรถยนต์ ต่างกันอย่างไร?</span><span data-t="en">Cabin air filter vs engine air filter: what’s the difference?</span><span data-t="zh">汽車冷氣濾網與空氣濾清器有何不同？</span></p>
           </a>
           <a href="how-to-choose-cabin-air-filter.html" class="group rounded-2xl border border-brand-100 p-5 transition hover:border-brand-300 hover:shadow-soft">
-            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700">กรองแอร์รถยนต์ยี่ห้อไหนดี? 5 เกณฑ์เลือกให้คุ้มค่า</p>
+            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">กรองแอร์รถยนต์ยี่ห้อไหนดี? 5 เกณฑ์เลือกให้คุ้มค่า</span><span data-t="en">Which cabin air filter is best? 5 criteria to choose well</span><span data-t="zh">汽車冷氣濾網哪個牌子好？5 個挑選重點</span></p>
           </a>
         </div>
       </section>
@@ -150,13 +226,30 @@
   </main>
   <footer class="bg-brand-950 text-brand-300">
     <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-10 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8">
-      <p>© 2026 บริษัท 724 อินเตอร์ซัพพลาย จำกัด สงวนลิขสิทธิ์</p>
+      <p><span data-t="th">© 2026 บริษัท 724 อินเตอร์ซัพพลาย จำกัด สงวนลิขสิทธิ์</span><span data-t="en">© 2026 724 Inter Supply Co., Ltd. All rights reserved.</span><span data-t="zh">© 2026 724 Inter Supply Co., Ltd. 版權所有</span></p>
       <div class="flex flex-wrap gap-x-6 gap-y-2">
-        <a href="../" class="hover:text-white">หน้าแรก</a>
-        <a href="../articles/" class="hover:text-white">บทความ</a>
-        <a href="../#contact" class="hover:text-white">ติดต่อเรา</a>
+        <a href="../" class="hover:text-white"><span data-t="th">หน้าแรก</span><span data-t="en">Home</span><span data-t="zh">首頁</span></a>
+        <a href="../articles/" class="hover:text-white"><span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></a>
+        <a href="../#contact" class="hover:text-white"><span data-t="th">ติดต่อเรา</span><span data-t="en">Contact Us</span><span data-t="zh">聯絡我們</span></a>
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var META = JSON.parse(document.getElementById('meta-i18n').textContent);
+      var desc = document.querySelector('meta[name=description]');
+      function setLang(l) {
+        document.documentElement.setAttribute('data-l', l);
+        document.documentElement.lang = { th: 'th', en: 'en', zh: 'zh-Hant' }[l];
+        document.title = META[l][0];
+        desc.setAttribute('content', META[l][1]);
+        document.querySelectorAll('img[data-alt-' + l + ']').forEach(function (i) { i.alt = i.getAttribute('data-alt-' + l); });
+        document.querySelectorAll('.lang-btn').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.setLang === l ? 'true' : 'false'); });
+        try { localStorage.setItem('lang', l); } catch (e) {}
+      }
+      document.querySelectorAll('.lang-btn').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.setLang); }); });
+      setLang(document.documentElement.getAttribute('data-l') || 'th');
+    })();
+  </script>
 </body>
 </html>

@@ -13,9 +13,23 @@
   <meta property="og:url" content="https://www.724intersupply.com/articles/excavator-cabin-air-filter.html" />
   <meta property="og:image" content="https://www.724intersupply.com/assets/construction-machine.webp" />
   <meta property="og:locale" content="th_TH" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search).get('lang'), l = q;
+      if (!l) { try { l = localStorage.getItem('lang'); } catch (e) {} }
+      if (['th', 'en', 'zh'].indexOf(l) < 0) l = 'th';
+      if (q) { try { localStorage.setItem('lang', l); } catch (e) {} }
+      document.documentElement.setAttribute('data-l', l);
+      document.documentElement.lang = { th: 'th', en: 'en', zh: 'zh-Hant' }[l];
+    })();
+  </script>
+  <link rel="preload" href="../assets/fonts/anuphan-thai-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../assets/fonts/fonts.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     // ปรับแต่งธีม: โทนเขียว-ขาว แบบ Luxury Minimal
@@ -23,7 +37,7 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'Anuphan', 'Noto Sans TC', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'ui-sans-serif', 'system-ui', 'sans-serif'],
           },
           colors: {
             brand: {
@@ -50,7 +64,15 @@
     };
   </script>
   <style>
-    body { font-family: 'Anuphan', 'Inter', sans-serif; }
+    body { font-family: 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', 'Inter', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif; }
+    html[lang="en"] body { font-family: 'Inter', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', sans-serif; }
+    html[lang="zh-Hant"] body { font-family: 'Inter', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', sans-serif; }
+    /* แสดงเฉพาะภาษาที่เลือก */
+    html:not([data-l]) [data-t]:not([data-t="th"]),
+    html[data-l="th"] [data-t]:not([data-t="th"]),
+    html[data-l="en"] [data-t]:not([data-t="en"]),
+    html[data-l="zh"] [data-t]:not([data-t="zh"]) { display: none !important; }
+    .lang-btn[aria-pressed="true"] { background: #225a41; color: #fff; }
     .article h2 { margin: 2.5rem 0 1rem; font-size: 1.5rem; line-height: 1.4; font-weight: 600; color: #0c2119; }
     .article h3 { margin: 1.75rem 0 .5rem; font-size: 1.2rem; font-weight: 600; color: #183c2d; }
     .article p { margin: 1rem 0; line-height: 1.9; color: #475569; font-size: 1.0625rem; }
@@ -65,35 +87,37 @@
     .article th { background: #f1f8f4; color: #183c2d; font-weight: 600; }
     @media (max-width: 640px) { .article table { display: block; overflow-x: auto; } }
   </style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "กรองแอร์รถขุดและเครื่องจักรกลหนัก: ปกป้องคนขับในพื้นที่ฝุ่นจัด", "description": "ทำไมกรองแอร์รถขุด รถตัก และเครื่องจักรกลหนักจึงสำคัญต่อสุขภาพผู้ปฏิบัติงาน วิธีสังเกตเมื่อต้องเปลี่ยน ข้อควรระวังในการทำความสะอาด และการเลือกแผ่นกรองที่เหมาะกับงานหนัก", "image": "https://www.724intersupply.com/assets/construction-machine.webp", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "inLanguage": "th", "mainEntityOfPage": "https://www.724intersupply.com/articles/excavator-cabin-air-filter.html", "author": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd."}, "publisher": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd.", "logo": {"@type": "ImageObject", "url": "https://www.724intersupply.com/assets/logo-724.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://www.724intersupply.com/"}, {"@type": "ListItem", "position": 2, "name": "บทความ", "item": "https://www.724intersupply.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "กรองแอร์รถขุดและเครื่องจักรกลหนัก: ปกป้องคนขับในพื้นที่ฝุ่นจัด", "item": "https://www.724intersupply.com/articles/excavator-cabin-air-filter.html"}]}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "กรองแอร์รถขุดและเครื่องจักรกลหนัก: ปกป้องคนขับในพื้นที่ฝุ่นจัด", "description": "ทำไมกรองแอร์รถขุด รถตัก และเครื่องจักรกลหนักจึงสำคัญต่อสุขภาพผู้ปฏิบัติงาน วิธีสังเกตเมื่อต้องเปลี่ยน ข้อควรระวังในการทำความสะอาด และการเลือกแผ่นกรองที่เหมาะกับงานหนัก", "image": "https://www.724intersupply.com/assets/construction-machine.webp", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "inLanguage": ["th", "en", "zh-Hant"], "mainEntityOfPage": "https://www.724intersupply.com/articles/excavator-cabin-air-filter.html", "alternativeHeadline": ["Cabin air filters for excavators and heavy machinery: protecting operators on dusty sites", "挖土機與重型機械駕駛艙空氣濾網：在高粉塵工地守護駕駛"], "author": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd."}, "publisher": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd.", "logo": {"@type": "ImageObject", "url": "https://www.724intersupply.com/assets/logo-724.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://www.724intersupply.com/"}, {"@type": "ListItem", "position": 2, "name": "บทความ", "item": "https://www.724intersupply.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "กรองแอร์รถขุดและเครื่องจักรกลหนัก: ปกป้องคนขับในพื้นที่ฝุ่นจัด", "item": "https://www.724intersupply.com/articles/excavator-cabin-air-filter.html"}]}]}</script>
+  <script type="application/json" id="meta-i18n">{"th": ["กรองแอร์รถขุดและเครื่องจักรกลหนัก: ปกป้องคนขับในพื้นที่ฝุ่นจัด | 724 อินเตอร์ซัพพลาย", "ทำไมกรองแอร์รถขุด รถตัก และเครื่องจักรกลหนักจึงสำคัญต่อสุขภาพผู้ปฏิบัติงาน วิธีสังเกตเมื่อต้องเปลี่ยน ข้อควรระวังในการทำความสะอาด และการเลือกแผ่นกรองที่เหมาะกับงานหนัก"], "en": ["Cabin air filters for excavators and heavy machinery: protecting operators on dusty sites | 724 Inter Supply", "Why cabin air filters in excavators, loaders and heavy machinery matter for operator health, signs they need replacing, cleaning precautions and choosing heavy-duty filters."], "zh": ["挖土機與重型機械駕駛艙空氣濾網：在高粉塵工地守護駕駛｜724 Inter Supply", "挖土機、裝載機與重型機械的駕駛艙濾網為何攸關作業人員健康、需要更換的徵兆、清潔注意事項，以及如何挑選重負荷濾網。"]}</script>
 </head>
 <body class="bg-white text-slate-700 antialiased">
   <header class="sticky top-0 z-50 border-b border-brand-100 bg-white/90 backdrop-blur-md">
-    <nav class="mx-auto flex h-20 max-w-6xl items-center justify-between px-5 sm:px-8">
-      <a href="../" class="flex items-center gap-3" aria-label="724 อินเตอร์ซัพพลาย หน้าแรก">
+    <nav class="mx-auto flex h-20 max-w-6xl items-center justify-between gap-3 px-5 sm:px-8">
+      <a href="../" class="flex shrink-0 items-center gap-3" aria-label="724 Inter Supply">
         <img src="../assets/logo-724.png" alt="724 Inter Supply" class="h-9 w-auto" />
-        <span class="hidden sm:block h-8 w-px bg-brand-100"></span>
-        <span class="hidden sm:block text-sm font-semibold text-brand-900">แผ่นกรองแอร์รถยนต์</span>
+        <span class="hidden md:block h-8 w-px bg-brand-100"></span>
+        <span class="hidden md:block text-sm font-semibold text-brand-900"><span data-t="th">แผ่นกรองแอร์รถยนต์</span><span data-t="en">Car cabin air filters</span><span data-t="zh">汽車冷氣濾網</span></span>
       </a>
-      <div class="flex items-center gap-2 sm:gap-6 text-sm">
-        <a href="../articles/" class="hidden sm:inline text-slate-600 hover:text-brand-700">บทความ</a>
-        <a href="../#contact" class="hidden sm:inline text-slate-600 hover:text-brand-700">ติดต่อเรา</a>
-        <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="rounded-full bg-brand-700 px-5 py-2.5 font-medium text-white shadow-soft transition hover:bg-brand-800">ค้นหาสินค้า</a>
+      <div class="flex items-center gap-2 sm:gap-5 text-sm">
+        <a href="../articles/" class="hidden sm:inline text-slate-600 hover:text-brand-700"><span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></a>
+        <a href="../#contact" class="hidden sm:inline text-slate-600 hover:text-brand-700"><span data-t="th">ติดต่อเรา</span><span data-t="en">Contact Us</span><span data-t="zh">聯絡我們</span></a>
+        <div class="flex items-center rounded-full border border-brand-100 p-0.5 text-xs font-medium text-brand-800" role="group" aria-label="Language"><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="th" aria-pressed="false">TH</button><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="en" aria-pressed="false">EN</button><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="zh" aria-pressed="false">中文</button></div>
+        <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="hidden sm:inline-block rounded-full bg-brand-700 px-5 py-2.5 font-medium text-white shadow-soft transition hover:bg-brand-800"><span data-t="th">ค้นหาสินค้า</span><span data-t="en">Find products</span><span data-t="zh">搜尋產品</span></a>
       </div>
     </nav>
   </header>
   <main>
     <article class="mx-auto max-w-3xl px-5 sm:px-8 pt-10 pb-20">
       <nav class="text-sm text-slate-500" aria-label="breadcrumb">
-        <a href="../" class="hover:text-brand-700">หน้าแรก</a> <span class="mx-1">/</span>
-        <a href="./" class="hover:text-brand-700">บทความ</a>
+        <a href="../" class="hover:text-brand-700"><span data-t="th">หน้าแรก</span><span data-t="en">Home</span><span data-t="zh">首頁</span></a> <span class="mx-1">/</span>
+        <a href="./" class="hover:text-brand-700"><span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></a>
       </nav>
-      <h1 class="mt-5 text-3xl sm:text-4xl font-semibold leading-snug text-brand-950">กรองแอร์รถขุดและเครื่องจักรกลหนัก: ปกป้องคนขับในพื้นที่ฝุ่นจัด</h1>
-      <p class="mt-4 text-sm text-slate-500">โดย 724 อินเตอร์ซัพพลาย · <time datetime="2026-09-30">30 กันยายน 2569</time></p>
+      <h1 class="mt-5 text-3xl sm:text-4xl font-semibold leading-snug text-brand-950"><span data-t="th">กรองแอร์รถขุดและเครื่องจักรกลหนัก: ปกป้องคนขับในพื้นที่ฝุ่นจัด</span><span data-t="en">Cabin air filters for excavators and heavy machinery: protecting operators on dusty sites</span><span data-t="zh">挖土機與重型機械駕駛艙空氣濾網：在高粉塵工地守護駕駛</span></h1>
+      <p class="mt-4 text-sm text-slate-500"><span data-t="th">โดย 724 อินเตอร์ซัพพลาย · </span><span data-t="en">By 724 Inter Supply · </span><span data-t="zh">724 Inter Supply · </span><time datetime="2026-09-30"><span data-t="th">30 กันยายน 2569</span><span data-t="en">30 September 2026</span><span data-t="zh">2026 年 9 月 30 日</span></time></p>
       <div class="mt-8 aspect-[16/9] overflow-hidden rounded-3xl bg-brand-50">
-        <img src="../assets/construction-machine.webp" alt="รถขุดทำงานในไซต์งานก่อสร้าง" class="h-full w-full object-cover" />
+        <img src="../assets/construction-machine.webp" alt="รถขุดทำงานในไซต์งานก่อสร้าง" data-alt-th="รถขุดทำงานในไซต์งานก่อสร้าง" data-alt-en="Excavator cabin air filters: protecting operators on dusty sites" data-alt-zh="挖土機駕駛艙空氣濾網：在高粉塵工地守護駕駛" class="h-full w-full object-cover" />
       </div>
-      <div class="article mt-8">
+      <div class="article mt-8" data-t="th" lang="th">
 <p>ผู้ควบคุมรถขุด รถตัก และเครื่องจักรกลหนักใช้เวลาทำงานในห้องโดยสารวันละหลายชั่วโมง ท่ามกลางฝุ่นดิน ฝุ่นหิน และฝุ่นปูนที่ฟุ้งกระจายตลอดเวลา <strong>กรองแอร์รถขุด</strong> หรือแผ่นกรองอากาศห้องโดยสารจึงไม่ใช่แค่อุปกรณ์ให้ความสบาย แต่เป็นด่านป้องกันสุขภาพระบบทางเดินหายใจของคนขับโดยตรง</p>
 
 <h2>ทำไมกรองแอร์เครื่องจักรกลหนักต้องแข็งแรงกว่ารถทั่วไป</h2>
@@ -127,26 +151,84 @@
 
 <p>724 อินเตอร์ซัพพลายขยายไลน์สินค้าสู่กลุ่มรถจักรกลหนักตั้งแต่ปี 2560 ผลิตแผ่นกรองอากาศห้องโดยสารสำหรับรถขุด รถตัก และเครื่องจักรกลหนัก สำหรับผู้รับเหมา ร้านอะไหล่เครื่องจักร และผู้ให้เช่าเครื่องจักรที่ต้องการราคาส่ง ติดต่อ <a href="mailto:marketing@724intersupply.com">marketing@724intersupply.com</a> หรือค้นหาสินค้าได้ที่ <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener">protectcabinfilter.com</a></p>
       </div>
+      <div class="article mt-8" data-t="en" lang="en">
+<p>Operators of excavators, loaders and other heavy machinery spend many hours a day in the cab, surrounded by soil, rock and cement dust. The <strong>excavator cabin air filter</strong> is therefore not just a comfort item — it directly protects the operator’s respiratory health.</p>
+<h2>Why heavy-machinery cabin filters must be tougher than car filters</h2>
+<ul>
+  <li><strong>Far more dust:</strong> digging, loading and grading create dense dust around the machine throughout the shift</li>
+  <li><strong>Invisible fine dust:</strong> some rock and soil dust contains very small particles that can reach deep into the lungs</li>
+  <li><strong>Heat and vibration:</strong> the filter must hold its shape and stay seated in its seal even under continuous heavy work</li>
+  <li><strong>The cab needs positive pressure:</strong> many machines are designed to push clean air out of the cab so dust can’t seep in through gaps — which only works well when the filter isn’t clogged</li>
+</ul>
+<h2>Signs it’s time to replace an excavator cabin filter</h2>
+<ol>
+  <li>Noticeably weaker A/C airflow in the cab</li>
+  <li>Unusual amounts of dust on the dashboard, seat or inside of the windows</li>
+  <li>The operator coughs, sneezes or has stinging eyes while working</li>
+  <li>The cab feels hot and stuffy even though the A/C is running</li>
+  <li>On inspection, the filter surface is dark or caked with packed soil</li>
+</ol>
+<p>Replacement intervals should follow the operating hours set by the machine manufacturer, with more frequent checks on very dusty sites such as mines, demolition work or unpaved roads in the dry season.</p>
+<h2>Cleaning precautions</h2>
+<p>Many sites blow filters out with compressed air to extend their life. Do this carefully: too much pressure or blowing from the wrong side can tear the fibres, leaving tiny holes you can’t see that let fine dust straight into the cab. If the filter is deformed, the seal is damaged or it is still dirty after cleaning, replace it immediately.</p>
+<h2>Choosing a filter for heavy-duty work</h2>
+<ul>
+  <li><strong>Heavy-duty media:</strong> captures particles down to 0.3 microns well and holds a lot of dust without clogging quickly</li>
+  <li><strong>Exact fit with a tight seal:</strong> no gaps for dust to slip around the edges</li>
+  <li><strong>A strong frame:</strong> withstands vibration and heat throughout its service life</li>
+  <li><strong>Stock ready to ship:</strong> a machine waiting for parts means delayed work, so choose a manufacturer that can deliver quickly</li>
+</ul>
+<p>724 Inter Supply expanded into heavy machinery in 2017 and manufactures cabin air filters for excavators, loaders and other heavy equipment. Contractors, machinery parts shops and equipment rental companies looking for wholesale prices can contact <a href="mailto:marketing@724intersupply.com">marketing@724intersupply.com</a> or search our products at <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener">protectcabinfilter.com</a></p>
+      </div>
+      <div class="article mt-8" data-t="zh" lang="zh-Hant">
+<p>挖土機、裝載機與重型機械的操作人員每天有好幾個小時待在駕駛艙內，四周充滿土塵、石粉與水泥粉塵。因此<strong>挖土機駕駛艙空氣濾網</strong>不只是提升舒適度的配備，更直接守護駕駛的呼吸道健康。</p>
+<h2>為何重型機械的駕駛艙濾網必須比一般車輛更強韌</h2>
+<ul>
+  <li><strong>粉塵量高出數倍：</strong>開挖、裝載與整地作業會在機具周圍整個班次持續揚起濃密粉塵</li>
+  <li><strong>肉眼看不見的細微粉塵：</strong>部分岩石與土壤粉塵含有極細微粒，可深入肺部</li>
+  <li><strong>高溫與震動：</strong>濾網即使在持續重負荷下，也必須維持形狀、不脫離密封座</li>
+  <li><strong>駕駛艙需要正壓：</strong>許多機具設計讓潔淨空氣由駕駛艙向外推送，避免粉塵從縫隙滲入，前提是濾網沒有堵塞</li>
+</ul>
+<h2>挖土機駕駛艙濾網需要更換的徵兆</h2>
+<ol>
+  <li>駕駛艙內冷氣出風明顯變弱</li>
+  <li>儀表板、座椅或車窗內側積灰異常</li>
+  <li>作業人員工作時咳嗽、打噴嚏或眼睛刺痛</li>
+  <li>冷氣雖在運轉，駕駛艙仍悶熱</li>
+  <li>檢查時濾網表面變深色或有結塊的泥土</li>
+</ol>
+<p>更換週期應依機具製造商規定的作業時數，並在礦場、拆除工程或旱季碎石路等高粉塵工地更頻繁地檢查。</p>
+<h2>清潔注意事項</h2>
+<p>許多工地習慣用氣槍吹濾網以延長使用壽命，但必須小心操作：氣壓過高或從錯誤方向吹，可能使纖維破裂出肉眼看不見的小孔，細微粉塵會直接進入駕駛艙。若濾網變形、密封邊損壞，或吹過後仍然髒污，應立即更換新品。</p>
+<h2>如何挑選重負荷用濾網</h2>
+<ul>
+  <li><strong>重負荷專用濾材：</strong>能有效攔截 0.3 微米等級的微粒，且容塵量大、不易快速堵塞</li>
+  <li><strong>尺寸精準、密封貼合：</strong>邊緣不留縫隙讓粉塵通過</li>
+  <li><strong>框架堅固：</strong>整個使用期間都能承受震動與高溫</li>
+  <li><strong>現貨快速出貨：</strong>機具停工等零件就代表工程延誤，應選擇能快速交貨的製造商</li>
+</ul>
+<p>724 Inter Supply 自 2017 年起跨足重型機械領域，生產挖土機、裝載機與各類重型機械的駕駛艙空氣濾網。需要批發價格的承包商、機械零件行與機具租賃業者，請聯絡 <a href="mailto:marketing@724intersupply.com">marketing@724intersupply.com</a> 或至 <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener">protectcabinfilter.com</a> 搜尋產品。</p>
+      </div>
       <aside class="mt-14 rounded-3xl bg-brand-900 p-8 sm:p-10 text-white">
         <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand-300 font-sans">Protect filter · Bee filter</p>
-        <h2 class="mt-2 text-2xl font-semibold">หาแผ่นกรองแอร์ที่ตรงกับรถของคุณ</h2>
-        <p class="mt-3 leading-relaxed text-brand-100/90">ผลิตตรงรุ่นสำหรับรถยนต์กว่า 1,400 รุ่น ทั้งรถยนต์นั่ง รถยนต์ไฟฟ้า และเครื่องจักรกลหนัก ร้านค้าและอู่ซ่อมสอบถามราคาส่งได้</p>
+        <h2 class="mt-2 text-2xl font-semibold"><span data-t="th">หาแผ่นกรองแอร์ที่ตรงกับรถของคุณ</span><span data-t="en">Find the right cabin air filter for your car</span><span data-t="zh">找到適合您車輛的冷氣濾網</span></h2>
+        <p class="mt-3 leading-relaxed text-brand-100/90"><span data-t="th">ผลิตตรงรุ่นสำหรับรถยนต์กว่า 1,400 รุ่น ทั้งรถยนต์นั่ง รถยนต์ไฟฟ้า และเครื่องจักรกลหนัก ร้านค้าและอู่ซ่อมสอบถามราคาส่งได้</span><span data-t="en">Made to fit more than 1,400 models — passenger cars, EVs and heavy machinery. Shops and garages can ask for wholesale prices.</span><span data-t="zh">依車型精準製造，適用超過 1,400 款自用車、電動車與重型機械。零件行與修車廠歡迎洽詢批發價。</span></p>
         <div class="mt-6 flex flex-col gap-3 sm:flex-row">
-          <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="inline-flex justify-center rounded-full bg-white px-7 py-3 font-medium text-brand-900 transition hover:bg-brand-100">ค้นหาสินค้า</a>
-          <a href="../#contact" class="inline-flex justify-center rounded-full border border-white/40 px-7 py-3 font-medium text-white transition hover:bg-white/10">ติดต่อขอราคาส่ง</a>
+          <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="inline-flex justify-center rounded-full bg-white px-7 py-3 font-medium text-brand-900 transition hover:bg-brand-100"><span data-t="th">ค้นหาสินค้า</span><span data-t="en">Find products</span><span data-t="zh">搜尋產品</span></a>
+          <a href="../#contact" class="inline-flex justify-center rounded-full border border-white/40 px-7 py-3 font-medium text-white transition hover:bg-white/10"><span data-t="th">ติดต่อขอราคาส่ง</span><span data-t="en">Ask for wholesale prices</span><span data-t="zh">洽詢批發價</span></a>
         </div>
       </aside>
       <section class="mt-14">
-        <h2 class="text-xl font-semibold text-brand-950">บทความที่เกี่ยวข้อง</h2>
+        <h2 class="text-xl font-semibold text-brand-950"><span data-t="th">บทความที่เกี่ยวข้อง</span><span data-t="en">Related articles</span><span data-t="zh">相關文章</span></h2>
         <div class="mt-5 grid gap-4 sm:grid-cols-3">
           <a href="when-to-replace-cabin-air-filter.html" class="group rounded-2xl border border-brand-100 p-5 transition hover:border-brand-300 hover:shadow-soft">
-            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700">กรองแอร์รถยนต์ควรเปลี่ยนเมื่อไหร่? 6 อาการกรองแอร์ตัน</p>
+            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">กรองแอร์รถยนต์ควรเปลี่ยนเมื่อไหร่? 6 อาการกรองแอร์ตัน</span><span data-t="en">When should you replace your cabin air filter? 6 signs it’s clogged</span><span data-t="zh">汽車冷氣濾網何時該更換？濾網堵塞的 6 個徵兆</span></p>
           </a>
           <a href="how-to-replace-cabin-air-filter.html" class="group rounded-2xl border border-brand-100 p-5 transition hover:border-brand-300 hover:shadow-soft">
-            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700">วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ใน 10 นาที</p>
+            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ใน 10 นาที</span><span data-t="en">How to replace your cabin air filter yourself in 10 minutes</span><span data-t="zh">10 分鐘自己動手更換汽車冷氣濾網</span></p>
           </a>
           <a href="cabin-air-filter-vs-engine-air-filter.html" class="group rounded-2xl border border-brand-100 p-5 transition hover:border-brand-300 hover:shadow-soft">
-            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700">กรองแอร์รถยนต์ กับ กรองอากาศรถยนต์ ต่างกันอย่างไร?</p>
+            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">กรองแอร์รถยนต์ กับ กรองอากาศรถยนต์ ต่างกันอย่างไร?</span><span data-t="en">Cabin air filter vs engine air filter: what’s the difference?</span><span data-t="zh">汽車冷氣濾網與空氣濾清器有何不同？</span></p>
           </a>
         </div>
       </section>
@@ -154,13 +236,30 @@
   </main>
   <footer class="bg-brand-950 text-brand-300">
     <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-10 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8">
-      <p>© 2026 บริษัท 724 อินเตอร์ซัพพลาย จำกัด สงวนลิขสิทธิ์</p>
+      <p><span data-t="th">© 2026 บริษัท 724 อินเตอร์ซัพพลาย จำกัด สงวนลิขสิทธิ์</span><span data-t="en">© 2026 724 Inter Supply Co., Ltd. All rights reserved.</span><span data-t="zh">© 2026 724 Inter Supply Co., Ltd. 版權所有</span></p>
       <div class="flex flex-wrap gap-x-6 gap-y-2">
-        <a href="../" class="hover:text-white">หน้าแรก</a>
-        <a href="../articles/" class="hover:text-white">บทความ</a>
-        <a href="../#contact" class="hover:text-white">ติดต่อเรา</a>
+        <a href="../" class="hover:text-white"><span data-t="th">หน้าแรก</span><span data-t="en">Home</span><span data-t="zh">首頁</span></a>
+        <a href="../articles/" class="hover:text-white"><span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></a>
+        <a href="../#contact" class="hover:text-white"><span data-t="th">ติดต่อเรา</span><span data-t="en">Contact Us</span><span data-t="zh">聯絡我們</span></a>
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var META = JSON.parse(document.getElementById('meta-i18n').textContent);
+      var desc = document.querySelector('meta[name=description]');
+      function setLang(l) {
+        document.documentElement.setAttribute('data-l', l);
+        document.documentElement.lang = { th: 'th', en: 'en', zh: 'zh-Hant' }[l];
+        document.title = META[l][0];
+        desc.setAttribute('content', META[l][1]);
+        document.querySelectorAll('img[data-alt-' + l + ']').forEach(function (i) { i.alt = i.getAttribute('data-alt-' + l); });
+        document.querySelectorAll('.lang-btn').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.setLang === l ? 'true' : 'false'); });
+        try { localStorage.setItem('lang', l); } catch (e) {}
+      }
+      document.querySelectorAll('.lang-btn').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.setLang); }); });
+      setLang(document.documentElement.getAttribute('data-l') || 'th');
+    })();
+  </script>
 </body>
 </html>

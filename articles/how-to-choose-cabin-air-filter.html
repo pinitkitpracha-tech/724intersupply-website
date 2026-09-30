@@ -13,9 +13,23 @@
   <meta property="og:url" content="https://www.724intersupply.com/articles/how-to-choose-cabin-air-filter.html" />
   <meta property="og:image" content="https://www.724intersupply.com/assets/hero-filters.webp" />
   <meta property="og:locale" content="th_TH" />
+  <meta property="og:locale:alternate" content="en_US" />
+  <meta property="og:locale:alternate" content="zh_TW" />
+  <script>
+    (function () {
+      var q = new URLSearchParams(location.search).get('lang'), l = q;
+      if (!l) { try { l = localStorage.getItem('lang'); } catch (e) {} }
+      if (['th', 'en', 'zh'].indexOf(l) < 0) l = 'th';
+      if (q) { try { localStorage.setItem('lang', l); } catch (e) {} }
+      document.documentElement.setAttribute('data-l', l);
+      document.documentElement.lang = { th: 'th', en: 'en', zh: 'zh-Hant' }[l];
+    })();
+  </script>
+  <link rel="preload" href="../assets/fonts/anuphan-thai-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="../assets/fonts/fonts.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Anuphan:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     // ปรับแต่งธีม: โทนเขียว-ขาว แบบ Luxury Minimal
@@ -23,7 +37,7 @@
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'Anuphan', 'Noto Sans TC', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+            sans: ['Inter', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'ui-sans-serif', 'system-ui', 'sans-serif'],
           },
           colors: {
             brand: {
@@ -50,7 +64,15 @@
     };
   </script>
   <style>
-    body { font-family: 'Anuphan', 'Inter', sans-serif; }
+    body { font-family: 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', 'Inter', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', sans-serif; }
+    html[lang="en"] body { font-family: 'Inter', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', sans-serif; }
+    html[lang="zh-Hant"] body { font-family: 'Inter', 'Noto Sans TC', 'PingFang TC', 'Microsoft JhengHei', 'Anuphan', 'Sukhumvit Set', 'Leelawadee UI', 'Noto Sans Thai', sans-serif; }
+    /* แสดงเฉพาะภาษาที่เลือก */
+    html:not([data-l]) [data-t]:not([data-t="th"]),
+    html[data-l="th"] [data-t]:not([data-t="th"]),
+    html[data-l="en"] [data-t]:not([data-t="en"]),
+    html[data-l="zh"] [data-t]:not([data-t="zh"]) { display: none !important; }
+    .lang-btn[aria-pressed="true"] { background: #225a41; color: #fff; }
     .article h2 { margin: 2.5rem 0 1rem; font-size: 1.5rem; line-height: 1.4; font-weight: 600; color: #0c2119; }
     .article h3 { margin: 1.75rem 0 .5rem; font-size: 1.2rem; font-weight: 600; color: #183c2d; }
     .article p { margin: 1rem 0; line-height: 1.9; color: #475569; font-size: 1.0625rem; }
@@ -65,35 +87,37 @@
     .article th { background: #f1f8f4; color: #183c2d; font-weight: 600; }
     @media (max-width: 640px) { .article table { display: block; overflow-x: auto; } }
   </style>
-  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "กรองแอร์รถยนต์ยี่ห้อไหนดี? 5 เกณฑ์เลือกกรองแอร์ PM2.5 และแบบคาร์บอนให้คุ้มค่า", "description": "5 เกณฑ์เลือกกรองแอร์รถยนต์ให้เหมาะกับการใช้งาน เปรียบเทียบกรองแอร์รถยนต์ PM2.5 กับกรองแอร์คาร์บอน และสิ่งที่ควรดูก่อนเลือกซื้อหรือสั่งราคาส่ง", "image": "https://www.724intersupply.com/assets/hero-filters.webp", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "inLanguage": "th", "mainEntityOfPage": "https://www.724intersupply.com/articles/how-to-choose-cabin-air-filter.html", "author": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd."}, "publisher": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd.", "logo": {"@type": "ImageObject", "url": "https://www.724intersupply.com/assets/logo-724.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://www.724intersupply.com/"}, {"@type": "ListItem", "position": 2, "name": "บทความ", "item": "https://www.724intersupply.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "กรองแอร์รถยนต์ยี่ห้อไหนดี? 5 เกณฑ์เลือกกรองแอร์ PM2.5 และแบบคาร์บอนให้คุ้มค่า", "item": "https://www.724intersupply.com/articles/how-to-choose-cabin-air-filter.html"}]}]}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "Article", "headline": "กรองแอร์รถยนต์ยี่ห้อไหนดี? 5 เกณฑ์เลือกกรองแอร์ PM2.5 และแบบคาร์บอนให้คุ้มค่า", "description": "5 เกณฑ์เลือกกรองแอร์รถยนต์ให้เหมาะกับการใช้งาน เปรียบเทียบกรองแอร์รถยนต์ PM2.5 กับกรองแอร์คาร์บอน และสิ่งที่ควรดูก่อนเลือกซื้อหรือสั่งราคาส่ง", "image": "https://www.724intersupply.com/assets/hero-filters.webp", "datePublished": "2026-09-30", "dateModified": "2026-09-30", "inLanguage": ["th", "en", "zh-Hant"], "mainEntityOfPage": "https://www.724intersupply.com/articles/how-to-choose-cabin-air-filter.html", "alternativeHeadline": ["Which cabin air filter brand is best? 5 criteria for choosing PM2.5 and carbon filters", "汽車冷氣濾網哪個牌子好？挑選 PM2.5 與活性碳濾網的 5 個重點"], "author": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd."}, "publisher": {"@type": "Organization", "name": "724 Inter Supply Co., Ltd.", "logo": {"@type": "ImageObject", "url": "https://www.724intersupply.com/assets/logo-724.png"}}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "หน้าแรก", "item": "https://www.724intersupply.com/"}, {"@type": "ListItem", "position": 2, "name": "บทความ", "item": "https://www.724intersupply.com/articles/"}, {"@type": "ListItem", "position": 3, "name": "กรองแอร์รถยนต์ยี่ห้อไหนดี? 5 เกณฑ์เลือกกรองแอร์ PM2.5 และแบบคาร์บอนให้คุ้มค่า", "item": "https://www.724intersupply.com/articles/how-to-choose-cabin-air-filter.html"}]}]}</script>
+  <script type="application/json" id="meta-i18n">{"th": ["กรองแอร์รถยนต์ยี่ห้อไหนดี? 5 เกณฑ์เลือกกรองแอร์ PM2.5 และแบบคาร์บอนให้คุ้มค่า | 724 อินเตอร์ซัพพลาย", "5 เกณฑ์เลือกกรองแอร์รถยนต์ให้เหมาะกับการใช้งาน เปรียบเทียบกรองแอร์รถยนต์ PM2.5 กับกรองแอร์คาร์บอน และสิ่งที่ควรดูก่อนเลือกซื้อหรือสั่งราคาส่ง"], "en": ["Which cabin air filter brand is best? 5 criteria for choosing PM2.5 and carbon filters | 724 Inter Supply", "5 criteria for choosing the right cabin air filter, comparing PM2.5 synthetic filters with carbon filters, and what to check before buying retail or wholesale."], "zh": ["汽車冷氣濾網哪個牌子好？挑選 PM2.5 與活性碳濾網的 5 個重點｜724 Inter Supply", "挑選汽車冷氣濾網的 5 個標準，比較 PM2.5 合成纖維濾網與活性碳濾網，以及零售或批發採購前應注意的事項。"]}</script>
 </head>
 <body class="bg-white text-slate-700 antialiased">
   <header class="sticky top-0 z-50 border-b border-brand-100 bg-white/90 backdrop-blur-md">
-    <nav class="mx-auto flex h-20 max-w-6xl items-center justify-between px-5 sm:px-8">
-      <a href="../" class="flex items-center gap-3" aria-label="724 อินเตอร์ซัพพลาย หน้าแรก">
+    <nav class="mx-auto flex h-20 max-w-6xl items-center justify-between gap-3 px-5 sm:px-8">
+      <a href="../" class="flex shrink-0 items-center gap-3" aria-label="724 Inter Supply">
         <img src="../assets/logo-724.png" alt="724 Inter Supply" class="h-9 w-auto" />
-        <span class="hidden sm:block h-8 w-px bg-brand-100"></span>
-        <span class="hidden sm:block text-sm font-semibold text-brand-900">แผ่นกรองแอร์รถยนต์</span>
+        <span class="hidden md:block h-8 w-px bg-brand-100"></span>
+        <span class="hidden md:block text-sm font-semibold text-brand-900"><span data-t="th">แผ่นกรองแอร์รถยนต์</span><span data-t="en">Car cabin air filters</span><span data-t="zh">汽車冷氣濾網</span></span>
       </a>
-      <div class="flex items-center gap-2 sm:gap-6 text-sm">
-        <a href="../articles/" class="hidden sm:inline text-slate-600 hover:text-brand-700">บทความ</a>
-        <a href="../#contact" class="hidden sm:inline text-slate-600 hover:text-brand-700">ติดต่อเรา</a>
-        <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="rounded-full bg-brand-700 px-5 py-2.5 font-medium text-white shadow-soft transition hover:bg-brand-800">ค้นหาสินค้า</a>
+      <div class="flex items-center gap-2 sm:gap-5 text-sm">
+        <a href="../articles/" class="hidden sm:inline text-slate-600 hover:text-brand-700"><span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></a>
+        <a href="../#contact" class="hidden sm:inline text-slate-600 hover:text-brand-700"><span data-t="th">ติดต่อเรา</span><span data-t="en">Contact Us</span><span data-t="zh">聯絡我們</span></a>
+        <div class="flex items-center rounded-full border border-brand-100 p-0.5 text-xs font-medium text-brand-800" role="group" aria-label="Language"><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="th" aria-pressed="false">TH</button><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="en" aria-pressed="false">EN</button><button type="button" class="lang-btn rounded-full px-2.5 py-1 transition" data-set-lang="zh" aria-pressed="false">中文</button></div>
+        <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="hidden sm:inline-block rounded-full bg-brand-700 px-5 py-2.5 font-medium text-white shadow-soft transition hover:bg-brand-800"><span data-t="th">ค้นหาสินค้า</span><span data-t="en">Find products</span><span data-t="zh">搜尋產品</span></a>
       </div>
     </nav>
   </header>
   <main>
     <article class="mx-auto max-w-3xl px-5 sm:px-8 pt-10 pb-20">
       <nav class="text-sm text-slate-500" aria-label="breadcrumb">
-        <a href="../" class="hover:text-brand-700">หน้าแรก</a> <span class="mx-1">/</span>
-        <a href="./" class="hover:text-brand-700">บทความ</a>
+        <a href="../" class="hover:text-brand-700"><span data-t="th">หน้าแรก</span><span data-t="en">Home</span><span data-t="zh">首頁</span></a> <span class="mx-1">/</span>
+        <a href="./" class="hover:text-brand-700"><span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></a>
       </nav>
-      <h1 class="mt-5 text-3xl sm:text-4xl font-semibold leading-snug text-brand-950">กรองแอร์รถยนต์ยี่ห้อไหนดี? 5 เกณฑ์เลือกกรองแอร์ PM2.5 และแบบคาร์บอนให้คุ้มค่า</h1>
-      <p class="mt-4 text-sm text-slate-500">โดย 724 อินเตอร์ซัพพลาย · <time datetime="2026-09-30">30 กันยายน 2569</time></p>
+      <h1 class="mt-5 text-3xl sm:text-4xl font-semibold leading-snug text-brand-950"><span data-t="th">กรองแอร์รถยนต์ยี่ห้อไหนดี? 5 เกณฑ์เลือกกรองแอร์ PM2.5 และแบบคาร์บอนให้คุ้มค่า</span><span data-t="en">Which cabin air filter brand is best? 5 criteria for choosing PM2.5 and carbon filters</span><span data-t="zh">汽車冷氣濾網哪個牌子好？挑選 PM2.5 與活性碳濾網的 5 個重點</span></h1>
+      <p class="mt-4 text-sm text-slate-500"><span data-t="th">โดย 724 อินเตอร์ซัพพลาย · </span><span data-t="en">By 724 Inter Supply · </span><span data-t="zh">724 Inter Supply · </span><time datetime="2026-09-30"><span data-t="th">30 กันยายน 2569</span><span data-t="en">30 September 2026</span><span data-t="zh">2026 年 9 月 30 日</span></time></p>
       <div class="mt-8 aspect-[16/9] overflow-hidden rounded-3xl bg-brand-50">
-        <img src="../assets/hero-filters.webp" alt="แผ่นกรองแอร์รถยนต์สีขาว Protect filter" class="h-full w-full object-cover" />
+        <img src="../assets/hero-filters.webp" alt="แผ่นกรองแอร์รถยนต์สีขาว Protect filter" data-alt-th="แผ่นกรองแอร์รถยนต์สีขาว Protect filter" data-alt-en="Which cabin air filter is best? 5 criteria to choose well" data-alt-zh="汽車冷氣濾網哪個牌子好？5 個挑選重點" class="h-full w-full object-cover" />
       </div>
-      <div class="article mt-8">
+      <div class="article mt-8" data-t="th" lang="th">
 <p>คำถามว่า <strong>กรองแอร์รถยนต์ยี่ห้อไหนดี</strong> ไม่มีคำตอบเดียวที่เหมาะกับทุกคน เพราะขึ้นอยู่กับรุ่นรถ สภาพแวดล้อม และงบประมาณ แทนที่จะดูแค่ชื่อยี่ห้อ ลองใช้ 5 เกณฑ์ต่อไปนี้ช่วยตัดสินใจ</p>
 
 <h2>1. ขนาดตรงรุ่น พอดีช่อง</h2>
@@ -117,26 +141,62 @@
 <h2>ซื้อปลีก หรือสั่งกรองแอร์รถยนต์ราคาส่ง</h2>
 <p>สำหรับร้านอะไหล่ อู่ซ่อม และผู้จัดจำหน่าย การสั่งซื้อจากผู้ผลิตโดยตรงช่วยให้ได้สินค้าครบรุ่นและราคาส่งที่เหมาะสม 724 อินเตอร์ซัพพลายผลิตแผ่นกรองแอร์รถยนต์แบรนด์ <strong>Protect filter</strong> และ <strong>Bee filter</strong> ครอบคลุมกว่า 1,400 รุ่น พร้อมบริการรับจ้างผลิต OEM/ODM สนใจเป็นตัวแทนจำหน่ายติดต่อ <a href="mailto:marketing@724intersupply.com">marketing@724intersupply.com</a> หรือค้นหาสินค้าได้ที่ <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener">protectcabinfilter.com</a></p>
       </div>
+      <div class="article mt-8" data-t="en" lang="en">
+<p>There’s no single answer to <strong>which cabin air filter brand is best</strong> — it depends on your car, your environment and your budget. Instead of looking only at the brand name, use these 5 criteria to decide.</p>
+<h2>1. An exact fit for your model</h2>
+<p>This matters most. Even the best filter is useless if air can slip around its edges without passing through the media. Choose a filter made to the size of your specific model, not a “universal” size shared by many models.</p>
+<h2>2. Fine-dust filtration efficiency</h2>
+<p>If you drive in the city or during smoky, dusty periods, look for a <strong>PM2.5 cabin air filter</strong> that states its filtration efficiency clearly and has test results from a reliable institution.</p>
+<h2>3. Synthetic or carbon?</h2>
+<ul>
+  <li><strong>Synthetic filters:</strong> focus on capturing dust and pollen, allow good airflow and offer great value for everyday use</li>
+  <li><strong>Carbon cabin filters:</strong> add an activated-carbon layer that absorbs exhaust fumes and musty odours — ideal for city traffic or anyone sensitive to smells</li>
+</ul>
+<h2>4. A rigid frame and the right pleat count</h2>
+<p>Too many pleats can restrict airflow, while too few leave too little filtering area. A good filter keeps its shape for its whole service life and doesn’t warp when exposed to humidity.</p>
+<h2>5. Clean packaging and safe materials</h2>
+<p>Filters should come in packaging that keeps them clean until they reach the user, and the fibres should be safe, with no residues such as formaldehyde — this is the air everyone in the car breathes.</p>
+<h2>Buying retail or wholesale</h2>
+<p>For parts shops, garages and distributors, buying direct from the manufacturer gives you complete model coverage and fair wholesale prices. 724 Inter Supply manufactures <strong>Protect filter</strong> and <strong>Bee filter</strong> cabin air filters for more than 1,400 models and offers OEM/ODM manufacturing. To become a dealer, contact <a href="mailto:marketing@724intersupply.com">marketing@724intersupply.com</a> or search our products at <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener">protectcabinfilter.com</a></p>
+      </div>
+      <div class="article mt-8" data-t="zh" lang="zh-Hant">
+<p>「<strong>汽車冷氣濾網哪個牌子好</strong>」並沒有適合所有人的標準答案，要看車型、使用環境與預算而定。與其只看品牌名稱，不如用以下 5 個標準來判斷。</p>
+<h2>1. 依車型精準貼合濾網槽</h2>
+<p>這是最重要的一點。再好的濾網，若邊緣有縫隙讓空氣不經濾材就流過，也是徒勞。請選擇依該車型尺寸製造的濾網，而非多款車共用的通用尺寸。</p>
+<h2>2. 細懸浮微粒過濾效率</h2>
+<p>若常在市區或霾害期間開車，請選擇標示清楚過濾效率、並有可靠機構檢測報告的 <strong>PM2.5 汽車冷氣濾網</strong>。</p>
+<h2>3. 合成纖維還是活性碳？</h2>
+<ul>
+  <li><strong>合成纖維濾網：</strong>著重攔截粉塵與花粉，氣流順暢、價格實惠，適合日常使用</li>
+  <li><strong>活性碳冷氣濾網：</strong>多一層活性碳，可吸附廢氣與霉味，適合常在市區塞車或對氣味敏感的人</li>
+</ul>
+<h2>4. 結構堅固、褶數適當</h2>
+<p>褶數過多可能阻礙氣流，褶數太少則過濾面積不足。好的濾網在整個使用期間都能維持形狀，受潮也不會變形。</p>
+<h2>5. 包裝潔淨、材質安全</h2>
+<p>濾網應以能保持潔淨直到使用者手中的包裝出貨，纖維也應安全、無甲醛等殘留物，因為這是車內每個人呼吸的空氣。</p>
+<h2>零售購買或批發訂購</h2>
+<p>對於零件行、修車廠與經銷商而言，直接向製造商採購可取得完整車型與合理的批發價格。724 Inter Supply 生產 <strong>Protect filter</strong> 與 <strong>Bee filter</strong> 汽車冷氣濾網，適用超過 1,400 款車型，並提供 OEM/ODM 代工服務。有意成為經銷商請聯絡 <a href="mailto:marketing@724intersupply.com">marketing@724intersupply.com</a>，或至 <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener">protectcabinfilter.com</a> 搜尋產品。</p>
+      </div>
       <aside class="mt-14 rounded-3xl bg-brand-900 p-8 sm:p-10 text-white">
         <p class="text-xs font-semibold tracking-[0.2em] uppercase text-brand-300 font-sans">Protect filter · Bee filter</p>
-        <h2 class="mt-2 text-2xl font-semibold">หาแผ่นกรองแอร์ที่ตรงกับรถของคุณ</h2>
-        <p class="mt-3 leading-relaxed text-brand-100/90">ผลิตตรงรุ่นสำหรับรถยนต์กว่า 1,400 รุ่น ทั้งรถยนต์นั่ง รถยนต์ไฟฟ้า และเครื่องจักรกลหนัก ร้านค้าและอู่ซ่อมสอบถามราคาส่งได้</p>
+        <h2 class="mt-2 text-2xl font-semibold"><span data-t="th">หาแผ่นกรองแอร์ที่ตรงกับรถของคุณ</span><span data-t="en">Find the right cabin air filter for your car</span><span data-t="zh">找到適合您車輛的冷氣濾網</span></h2>
+        <p class="mt-3 leading-relaxed text-brand-100/90"><span data-t="th">ผลิตตรงรุ่นสำหรับรถยนต์กว่า 1,400 รุ่น ทั้งรถยนต์นั่ง รถยนต์ไฟฟ้า และเครื่องจักรกลหนัก ร้านค้าและอู่ซ่อมสอบถามราคาส่งได้</span><span data-t="en">Made to fit more than 1,400 models — passenger cars, EVs and heavy machinery. Shops and garages can ask for wholesale prices.</span><span data-t="zh">依車型精準製造，適用超過 1,400 款自用車、電動車與重型機械。零件行與修車廠歡迎洽詢批發價。</span></p>
         <div class="mt-6 flex flex-col gap-3 sm:flex-row">
-          <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="inline-flex justify-center rounded-full bg-white px-7 py-3 font-medium text-brand-900 transition hover:bg-brand-100">ค้นหาสินค้า</a>
-          <a href="../#contact" class="inline-flex justify-center rounded-full border border-white/40 px-7 py-3 font-medium text-white transition hover:bg-white/10">ติดต่อขอราคาส่ง</a>
+          <a href="https://www.protectcabinfilter.com" target="_blank" rel="noopener" class="inline-flex justify-center rounded-full bg-white px-7 py-3 font-medium text-brand-900 transition hover:bg-brand-100"><span data-t="th">ค้นหาสินค้า</span><span data-t="en">Find products</span><span data-t="zh">搜尋產品</span></a>
+          <a href="../#contact" class="inline-flex justify-center rounded-full border border-white/40 px-7 py-3 font-medium text-white transition hover:bg-white/10"><span data-t="th">ติดต่อขอราคาส่ง</span><span data-t="en">Ask for wholesale prices</span><span data-t="zh">洽詢批發價</span></a>
         </div>
       </aside>
       <section class="mt-14">
-        <h2 class="text-xl font-semibold text-brand-950">บทความที่เกี่ยวข้อง</h2>
+        <h2 class="text-xl font-semibold text-brand-950"><span data-t="th">บทความที่เกี่ยวข้อง</span><span data-t="en">Related articles</span><span data-t="zh">相關文章</span></h2>
         <div class="mt-5 grid gap-4 sm:grid-cols-3">
           <a href="when-to-replace-cabin-air-filter.html" class="group rounded-2xl border border-brand-100 p-5 transition hover:border-brand-300 hover:shadow-soft">
-            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700">กรองแอร์รถยนต์ควรเปลี่ยนเมื่อไหร่? 6 อาการกรองแอร์ตัน</p>
+            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">กรองแอร์รถยนต์ควรเปลี่ยนเมื่อไหร่? 6 อาการกรองแอร์ตัน</span><span data-t="en">When should you replace your cabin air filter? 6 signs it’s clogged</span><span data-t="zh">汽車冷氣濾網何時該更換？濾網堵塞的 6 個徵兆</span></p>
           </a>
           <a href="how-to-replace-cabin-air-filter.html" class="group rounded-2xl border border-brand-100 p-5 transition hover:border-brand-300 hover:shadow-soft">
-            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700">วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ใน 10 นาที</p>
+            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">วิธีเปลี่ยนกรองแอร์รถยนต์ด้วยตัวเอง ใน 10 นาที</span><span data-t="en">How to replace your cabin air filter yourself in 10 minutes</span><span data-t="zh">10 分鐘自己動手更換汽車冷氣濾網</span></p>
           </a>
           <a href="cabin-air-filter-vs-engine-air-filter.html" class="group rounded-2xl border border-brand-100 p-5 transition hover:border-brand-300 hover:shadow-soft">
-            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700">กรองแอร์รถยนต์ กับ กรองอากาศรถยนต์ ต่างกันอย่างไร?</p>
+            <p class="font-medium leading-snug text-brand-950 group-hover:text-brand-700"><span data-t="th">กรองแอร์รถยนต์ กับ กรองอากาศรถยนต์ ต่างกันอย่างไร?</span><span data-t="en">Cabin air filter vs engine air filter: what’s the difference?</span><span data-t="zh">汽車冷氣濾網與空氣濾清器有何不同？</span></p>
           </a>
         </div>
       </section>
@@ -144,13 +204,30 @@
   </main>
   <footer class="bg-brand-950 text-brand-300">
     <div class="mx-auto flex max-w-6xl flex-col gap-4 px-5 py-10 text-sm sm:flex-row sm:items-center sm:justify-between sm:px-8">
-      <p>© 2026 บริษัท 724 อินเตอร์ซัพพลาย จำกัด สงวนลิขสิทธิ์</p>
+      <p><span data-t="th">© 2026 บริษัท 724 อินเตอร์ซัพพลาย จำกัด สงวนลิขสิทธิ์</span><span data-t="en">© 2026 724 Inter Supply Co., Ltd. All rights reserved.</span><span data-t="zh">© 2026 724 Inter Supply Co., Ltd. 版權所有</span></p>
       <div class="flex flex-wrap gap-x-6 gap-y-2">
-        <a href="../" class="hover:text-white">หน้าแรก</a>
-        <a href="../articles/" class="hover:text-white">บทความ</a>
-        <a href="../#contact" class="hover:text-white">ติดต่อเรา</a>
+        <a href="../" class="hover:text-white"><span data-t="th">หน้าแรก</span><span data-t="en">Home</span><span data-t="zh">首頁</span></a>
+        <a href="../articles/" class="hover:text-white"><span data-t="th">บทความ</span><span data-t="en">Articles</span><span data-t="zh">文章</span></a>
+        <a href="../#contact" class="hover:text-white"><span data-t="th">ติดต่อเรา</span><span data-t="en">Contact Us</span><span data-t="zh">聯絡我們</span></a>
       </div>
     </div>
   </footer>
+  <script>
+    (function () {
+      var META = JSON.parse(document.getElementById('meta-i18n').textContent);
+      var desc = document.querySelector('meta[name=description]');
+      function setLang(l) {
+        document.documentElement.setAttribute('data-l', l);
+        document.documentElement.lang = { th: 'th', en: 'en', zh: 'zh-Hant' }[l];
+        document.title = META[l][0];
+        desc.setAttribute('content', META[l][1]);
+        document.querySelectorAll('img[data-alt-' + l + ']').forEach(function (i) { i.alt = i.getAttribute('data-alt-' + l); });
+        document.querySelectorAll('.lang-btn').forEach(function (b) { b.setAttribute('aria-pressed', b.dataset.setLang === l ? 'true' : 'false'); });
+        try { localStorage.setItem('lang', l); } catch (e) {}
+      }
+      document.querySelectorAll('.lang-btn').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.setLang); }); });
+      setLang(document.documentElement.getAttribute('data-l') || 'th');
+    })();
+  </script>
 </body>
 </html>
